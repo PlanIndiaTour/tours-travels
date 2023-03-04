@@ -8,7 +8,7 @@
 .header{
     width: 100vw;
     height: 100vh;
-    background: url(./../../assets/landscape_homeBG.jpg);
+    background: url(./../../assets/pexels-shalender-kumar-4144015.jpg);
     background-size: cover;
     background-attachment: fixed;
     display: flex;
@@ -33,7 +33,7 @@
 }
 
 .slogan{
-    font-size: 30px;
+    font-size: 32px;
     margin: 20px 0;
     display: flex;
     justify-content: center;

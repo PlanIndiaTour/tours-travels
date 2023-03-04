@@ -5,25 +5,26 @@ import "./home.css";
 import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
 import Navbar from "../../components/navbar/Navbar";
-import Destination from "../../components/destination/Destination";
-import Place from "../../components/place/Place";
-import Tour from "../../components/tour/Tour";
-import Webservice from "../../components/webservice/Webservice";
+// import Destination from "../../components/destination/Destination";
+// import Place from "../../components/place/Place";
+// import Webservice from "../../components/webservice/Webservice";
 
-import { Link } from "react-router-dom";
+// import Login from "../../components/loginSignup/Login";
+// import Signup from "../../components/loginSignup/Signup";
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Navbar />
       <Header />
-      <Destination />
+      {/* <Destination />
       <Place />
-      {/* <Tour /> */}
-      {/* <Review /> */}
-      <Webservice />
+      <Webservice /> */}
+      {/* <Signup /> */}
+      {/* <Login /> */}
+      <div className="empty"></div>
       <Footer />
-    </div>
+    </>
   );
 };
 

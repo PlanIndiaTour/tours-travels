@@ -12,7 +12,9 @@ import { faCircleArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 import { Link } from "react-router-dom";
 
-const destination = () => {
+import PropTypes from "prop-types";
+
+const destination = (props) => {
   return (
     <>
       <div className="destinationBody">
@@ -27,7 +29,7 @@ const destination = () => {
                   className="dImage"
                 />
               </div>
-              <div className="destinationTitle">Pune</div>
+              <div className="destinationTitle">{props.pune}</div>
             </Link>
           </div>
           <div className="destinationItem">
@@ -63,6 +65,14 @@ const destination = () => {
       </div>
     </>
   );
+};
+
+destination.prototype = {
+  pune: PropTypes.string.isRequired,
+};
+
+destination.defaultProps = {
+  pune: "Pune",
 };
 
 export default destination;

@@ -12,7 +12,7 @@ import {
   faTwitter,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
-import { faBorderAll } from "@fortawesome/free-solid-svg-icons";
+// import { faBorderAll } from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => {
   return (
@@ -58,6 +58,7 @@ const Footer = () => {
           <div className="footerLinkWrapper">
             <div class="gmap_canvas">
               <iframe
+                title="map"
                 width="320"
                 height="200"
                 id="gmap_canvas"
@@ -106,6 +107,14 @@ const Footer = () => {
                   aria-label="youtube"
                 >
                   <FontAwesomeIcon icon={faYoutube} />
+                </Link>
+                <Link
+                  to="https://www.youtube.com/channel/UCiD-UCnfS1obZEUUh9G6I-w"
+                  class="socialIconLink youtube"
+                  target="_blank"
+                  aria-label="youtube"
+                >
+                  <FontAwesomeIcon icon={faTwitter} />
                 </Link>
               </div>
               <div className="footerLogo">

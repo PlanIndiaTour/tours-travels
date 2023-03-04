@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "./navbar.css";
 
@@ -9,7 +9,22 @@ import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 import { Link } from "react-router-dom";
 
+import Login from "../loginSignup/Login";
+import Signup from "../loginSignup/Signup";
+
 const Navbar = () => {
+  const [login, setLogin] = useState(false);
+
+  const toggleLogin = () => {
+    setLogin(!login);
+  };
+
+  const [signup, setSignup] = useState(false);
+
+  const toggleSignup = () => {
+    setSignup(!signup);
+  };
+
   return (
     <>
       <nav className="navbar">
@@ -28,7 +43,7 @@ const Navbar = () => {
               <Link to="/Destination">DESTINATION</Link>
             </span>
             <span>
-              <Link to="/Linkboutus">ABOUT US</Link>
+              <Link to="/Aboutus">ABOUT US</Link>
             </span>
           </div>
 
@@ -40,13 +55,26 @@ const Navbar = () => {
                 </Link>
               </div>
               <div class="dropdownProfile">
-                <Link to="/login">Log In</Link>
-                <Link to="/signup">Sign Up</Link>
+                <button onClick={toggleLogin}>Log In</button>
+                <button onClick={toggleSignup}>Sign Up</button>
               </div>
             </span>
           </div>
         </div>
       </nav>
+
+      {login && (
+        <div className="login">
+          <div className="overlay" onClick={toggleLogin}></div>
+          <Login />
+        </div>
+      )}
+      {signup && (
+        <div className="signin">
+          <div className="overlay" onClick={toggleSignup}></div>
+          <Signup />
+        </div>
+      )}
     </>
   );
 };
