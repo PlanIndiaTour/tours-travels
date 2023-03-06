@@ -1,0 +1,44 @@
+{
+  "users": [
+    {
+      "fullname": "Akshay Chirme",
+      "email": "akshay@gmail.com",
+      "contact": "12345678",
+      "username": "akshaych",
+      "password": "123456",
+      "id": 1
+    },
+    {
+      "fullname": "Radhika kolap",
+      "email": "radhika@gmail.com",
+      "contact": "8934698563",
+      "username": "radhika99",
+      "password": "123456",
+      "id": 2
+    },
+    {
+      "fullname": "Omkar Mali",
+      "email": "omkar@gmail.com",
+      "contact": "9284792842",
+      "username": "omkar123",
+      "password": "987654",
+      "id": 3
+    },
+    {
+      "fullname": "Shubham Abnave",
+      "email": "shubham@gmail.com",
+      "contact": "888888999",
+      "username": "shubham89",
+      "password": "898989",
+      "id": 4
+    },
+    {
+      "fullname": "kantara",
+      "email": "kantara@gmail.com",
+      "contact": "7777777",
+      "username": "sounthindia",
+      "password": "777777777",
+      "id": 5
+    }
+  ]
+}

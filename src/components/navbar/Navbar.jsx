@@ -43,6 +43,9 @@ const Navbar = () => {
               <Link to="/Destination">DESTINATION</Link>
             </span>
             <span>
+              <Link to="/Dashboard">ADMIN</Link>
+            </span>
+            <span>
               <Link to="/Aboutus">ABOUT US</Link>
             </span>
           </div>

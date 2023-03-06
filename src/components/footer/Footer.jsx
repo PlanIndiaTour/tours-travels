@@ -1,7 +1,9 @@
-import React from "react";
+ import React from "react";
 import "./footer.css";
 import img from "../../assets/PlanIT_logo.png";
 import { Link } from "react-router-dom";
+import { useRef } from "react";
+import emailjs from '@emailjs/browser';
 
 // import { Library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -15,6 +17,20 @@ import {
 // import { faBorderAll } from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => {
+  const contactEmail = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_ruqz38i', 'template_mlulbrq', contactEmail.current, 'a9M9n9mtTW2WH3iQ-')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+      e.target.reset()
+  };
+
   return (
     <>
       <div className="footerContainer">
@@ -24,7 +40,8 @@ const Footer = () => {
             context in life?
           </p>
           <div className="inputArea">
-            <form action="subscribe">
+            <form ref={contactEmail} onSubmit={sendEmail}  >
+            {/* action="subscribe" */}
               <input
                 type="email"
                 name="email"
@@ -34,6 +51,8 @@ const Footer = () => {
               <button className="footerBtn">Subscribe</button>
             </form>
           </div>
+          
+          
         </section>
 
         <div className="footerLinks">
