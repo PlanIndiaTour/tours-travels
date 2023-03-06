@@ -1,0 +1,75 @@
+.profilepage{
+    background-color: black;
+    padding: 50px;
+    padding-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profileimage{
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    z-index: 2;
+}
+
+.profiledetails{
+    max-width: 100%;
+    min-width: 100%;
+    position: relative;
+    top: -100px;
+    padding-bottom: 50px;
+    padding-top: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #d6cdea; 
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.profilename{
+    color: purple;
+    font-size: 30px;
+    font-weight: 700;
+    padding-bottom: 30px;
+}
+
+.profilecontact{
+    font-size: 20px;
+    display: flex;
+    gap: 20px;
+    color: rgba(0, 0, 0, 0.726);
+    padding: 8px 0px;
+}
+
+.profilecontactdetails{
+    padding-bottom: 25px;
+}
+
+.editprofile{
+    text-decoration: none;
+    color: #d6cdea;
+    background-color: purple;
+    padding: 5px 10px;
+    border: 1px solid purple;
+    border-radius: 10px;
+}
+
+.otherprofiledetails{
+    width: 100%;
+    min-height: 25vh;
+    position: relative;
+    top: -100px;
+    background-color: #cbe4f9;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.myBHeading{
+    font-size: 30px;
+    padding: 20px;
+    padding-left: 40px;
+    color: #006b6c;
+}
