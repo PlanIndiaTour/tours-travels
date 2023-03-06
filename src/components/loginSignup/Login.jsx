@@ -1,12 +1,9 @@
 import React, { useState } from "react";
-
 import "./login.css";
-
 import { Link } from "react-router-dom";
-
 import Signup from "../loginSignup/Signup";
 
-const Login = () => {
+const Login = (props) => {
   const [signup, setSignup] = useState(false);
 
   const toggleSignup = () => {

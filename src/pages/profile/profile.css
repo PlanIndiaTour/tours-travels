@@ -5,6 +5,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+<<<<<<< HEAD
+=======
+    width: 95vw;
+>>>>>>> 27be0452191814610767ecd3f2763c706786d759
 }
 
 .profileimage{
