@@ -21,6 +21,8 @@
 }
 
 .container-box{
+    width: 325px;
+    height: 180px;
     border: 1px solid #d3d3d3;
     border-radius: 5px;
     padding: 50px 10px;
@@ -32,12 +34,13 @@
     height: 100px;
     width: 100px;
     padding: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 35px;
 }
 
 .container-box h4{
     font-size: 20px;
     margin-bottom: 5px;
+    margin-top: 15px;
     font-weight: 550;
 }
 

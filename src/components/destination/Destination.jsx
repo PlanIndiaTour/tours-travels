@@ -18,7 +18,7 @@ const destination = (props) => {
   return (
     <>
       <div className="destinationBody">
-        <h2>Top Destinations</h2>
+        <h2>TOP DESTINATIONS</h2>
         <div className="destinationContainer">
           <div className="destinationItem">
             <Link to="/pune">
@@ -29,7 +29,7 @@ const destination = (props) => {
                   className="dImage"
                 />
               </div>
-              <div className="destinationTitle">{props.pune}</div>
+              <div className="destinationTitle">{props.place}</div>
             </Link>
           </div>
           <div className="destinationItem">
@@ -37,7 +37,7 @@ const destination = (props) => {
               <div className="destinationImage">
                 <img src={munnar} alt="PlanIT_logo" className="dImage" />
               </div>
-              <div className="destinationTitle">Munnar</div>
+              <div className="destinationTitle">MUNNAR</div>
             </Link>
           </div>
           <div className="destinationItem">
@@ -68,11 +68,11 @@ const destination = (props) => {
 };
 
 destination.prototype = {
-  pune: PropTypes.string.isRequired,
+  place: PropTypes.string.isRequired,
 };
 
 destination.defaultProps = {
-  pune: "Pune",
+  place: "Mumbai",
 };
 
 export default destination;

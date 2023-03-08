@@ -1,0 +1,46 @@
+.hometours{
+  width: 100%;
+  height: 95vh;
+  background-color: #ffe2eb;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.trendingtours{
+  width: 25%;
+  text-align: center;
+  color: #c32f00;
+  font-size: 40px;
+  padding: 20px;
+  position: relative;
+  /* border: 1px solid #c32f00; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.treandingtourcontainer {
+  width: 80%;
+  height: 80vh;
+  position: relative;
+  display: flex;
+  /* text-align: center; */
+  transition: all 0.5s;
+  overflow: hidden;
+  margin-left: 35px;
+  border: 1px solid black;
+}
+
+.viewMoreTours{
+  text-decoration: none;
+  border: 1px solid #c32f00;
+  padding: 0px 10px;
+  border-radius: 7px;
+  /* background-color: rgba(0,0,0,0.8); */
+  background-color: #c32f00;
+  color: #ffe2eb;
+  font-size: 20px;
+}

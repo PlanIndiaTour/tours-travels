@@ -1,0 +1,106 @@
+  
+  .homeplaces{
+    width: 100%;
+    height: 95vh;
+    background-color: #dafff6;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .popularPlaces{
+    width: 25%;
+    height: 95vh;
+    position: relative;
+    text-align: center;
+    color: #006b6c;
+    font-size: 40px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+  }
+  
+  .slider {
+    width: 80%;
+    height: 80vh;
+    position: relative;
+    display: flex;
+    /* text-align: center; */
+    transition: all 0.5s;
+    overflow: hidden;
+    margin-right: 35px;
+  }
+
+  /* .slideText{ */
+    /* color: transparent;
+    text-align: left;
+    font-size: 30px;
+    padding-top: 50px;
+    padding-left: 50px;
+  }
+  .slideText:hover{
+    color: whitesmoke;
+  } */
+
+  .slider .slide {
+    width: 25%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    transition: 0.5s;
+    text-decoration: none;
+    border: 1px solid #006b6c;
+    color: transparent;
+    font-size: 30px;
+    padding-top: 40px;
+  }
+
+  .slider .slide:nth-child(1) {
+    background: url("./../../assets/amerfort.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+  }
+  .slider .slide:nth-child(2) {
+    background: url("./../../assets/goldentemple.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  /* .slider .slide:nth-child(3) {
+    background: url("./../../assets/tajmahal.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+  } */
+  .slider .slide:nth-child(3) {
+    background: url("./../../assets/mysorepalace.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+  .slider .slide:nth-child(4) {
+    background: url("./../../assets/BudhhaPark_Ravangala_Sikkim.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+  .slider .slide:hover {
+    width: 100%;
+    cursor: pointer;
+    color: #006b6c;
+  }
+
+.viewMorePlaces{
+  text-decoration: none;
+  border: 1px solid #006b6c;
+  padding: 0px 10px;
+  border-radius: 7px;
+  /* background-color: rgba(0,0,0,0.8); */
+  background-color: #006b6c;
+  color: #dafff6;
+  font-size: 20px;
+}

@@ -2,6 +2,17 @@ import React from "react";
 
 import "./webservice.css";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faBowlFood,
+  faBurger,
+  faHamburger,
+  faHotel,
+  faMountainSun,
+  faPlaneDeparture,
+} from "@fortawesome/free-solid-svg-icons";
+import { faFolderOpen } from "@fortawesome/free-regular-svg-icons";
+
 const webservice = () => {
   return (
     <>
@@ -13,33 +24,37 @@ const webservice = () => {
           <div class="container-box">
             <div class="container-image">
               {/* <img src="./files/1a.jpg" alt="Flight Services"> */}
+              <FontAwesomeIcon icon={faMountainSun} size="5x" />
             </div>
-            <h4>Flight Services</h4>
-            <p>Arrival and Departure</p>
+            <h4>Best Value</h4>
+            <p>Value for money itineraries</p>
           </div>
 
           <div class="container-box">
             <div class="container-image">
               {/* <img src="./files/2a.jpg" alt="Food Services"> */}
+              <FontAwesomeIcon icon={faBowlFood} size="5x" />
             </div>
-            <h4>Food Services</h4>
-            <p>Catering</p>
+            <h4>All Meals</h4>
+            <p>Eat to your heart's content Breakfast. Lunch. Dinner.</p>
           </div>
 
           <div class="container-box">
             <div class="container-image">
               {/* <img src="./files/3a.jpg" alt="Travel Services"> */}
+              <FontAwesomeIcon icon={faPlaneDeparture} size="5x" />
             </div>
             <h4>Travel Services</h4>
-            <p>Pick-up/drop</p>
+            <p>include all rail and road transport as part of itinerary</p>
           </div>
 
           <div class="container-box">
             <div class="container-image">
               {/* <img src="./files/4a.jpg" alt="Hotel Services"> */}
+              <FontAwesomeIcon icon={faHotel} size="5x" />
             </div>
-            <h4>Hotel Services</h4>
-            <p>Check-in/out</p>
+            <h4>Accommodation</h4>
+            <p>Comfortable & Convenient hotels</p>
           </div>
         </div>
       </section>
