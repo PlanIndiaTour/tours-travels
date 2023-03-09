@@ -28,8 +28,8 @@ const Signup = ({toggleSignup}) => {
     // console.log(user)
   }
 
-  const AllUserDetails = async() => {
-    // e.preventDefault();
+  const AllUserDetails = async(e) => {
+    e.preventDefault();
     //-----------------------------------------------------------------kartik
     await signup(user);
     toggleSignup();

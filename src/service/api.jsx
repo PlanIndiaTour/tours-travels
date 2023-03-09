@@ -3,7 +3,7 @@ import axios from 'axios';
 const API_URL = 'http://localhost:8080';
 
 
-export const getUsers = async (id) => {
+export const getUser = async (id) => {
     id = id || '';
     try {
         return await axios.get(`${API_URL}/users/${id}`);
@@ -12,7 +12,14 @@ export const getUsers = async (id) => {
     }
 }
 
-
+export const getUsers = async (data) => {
+    // id = id || '';
+    try {
+        return await axios.get(`${API_URL}/users`,data)
+    } catch (error) {
+        console.log('Error in view user', error.message);
+    }
+}
 
 export const signup = async (user) => {
 
@@ -28,13 +35,14 @@ export const signup = async (user) => {
 }
 
 
-export const deleteUser = async (id) => {
+export const deleteUser = async (id,user) => {
     try {
-        return await axios.delete(`${API_URL}/user/${id}`);
+        return await axios.delete(`${API_URL}/user/${id}` );
     } catch (error) {
         console.log('Error while deleting user in api', error.message);
     }
 }
+
 
 export const editUser = async (id, user) => {
     try {
