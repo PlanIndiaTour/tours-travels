@@ -3,10 +3,10 @@ import { useState } from "react";
 import "./signup.css";
 import { signup } from "../../service/api";
 import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 
-const initialValues ={
+const initialValues = {
   fullname: '',
   email: '',
   contact: '',
@@ -15,21 +15,28 @@ const initialValues ={
 
 }
 
-const Signup = () => {
+const Signup = ({toggleSignup}) => {
+  
 
   const [user, setUser] = useState(initialValues);
-  const navigate = useNavigate();
+  const {fullname, email, contact, username, password} = user;
+  // const navigate = useNavigate();
 
   const onValueChange = (e) => {
-    
-    setUser({...user,[e.target.name]:e.target.value})
-    console.log(user)
+
+    setUser({ ...user, [e.target.name]: e.target.value })
+    // console.log(user)
   }
 
-  const AllUserDetails = async () =>{
+  const AllUserDetails = async() => {
+    // e.preventDefault();
+    //-----------------------------------------------------------------kartik
     await signup(user);
-    navigate('/');
+    toggleSignup();
   }
+  
+
+
 
   return (
     <>
@@ -39,12 +46,12 @@ const Signup = () => {
         </div>
         <div className="signupContent">
           <form
-            action="/"
+            onSubmit={AllUserDetails}
             name="signupForm"
             className="signupForm"
             id="signupForm"
-            method="post"
             
+
           >
             <div className="suserdata">
               <div className="suserinput" id="name">
@@ -55,6 +62,7 @@ const Signup = () => {
                   className="input1"
                   id="fullname"
                   name="fullname"
+                  value={fullname}
                   placeholder="Enter Full Name"
                   required
                 />
@@ -70,6 +78,7 @@ const Signup = () => {
                   className="input"
                   id="email"
                   name="email"
+                  value={email}
                   placeholder="Enter Email Address"
                   required
                 />
@@ -85,6 +94,7 @@ const Signup = () => {
                   className="input"
                   id="contact"
                   name="contact"
+                  value={contact}
                   placeholder="Enter Contact Number"
                   required
                 />
@@ -95,11 +105,12 @@ const Signup = () => {
               <div className="suserinput" id="user">
                 <label htmlFor="username">Username</label>
                 <input
-                onChange={(e) => onValueChange(e)}
+                  onChange={(e) => onValueChange(e)}
                   type="text"
                   className="input"
                   id="username"
                   name="username"
+                  value={username}
                   placeholder="Create Username"
                   required
                 />
@@ -115,6 +126,7 @@ const Signup = () => {
                   className="input"
                   id="password"
                   name="password"
+                  value={password}
                   placeholder="Create Password"
                   required
                 />
@@ -124,7 +136,7 @@ const Signup = () => {
               </div>
             </div>
             <div className="ssubmit">
-              <input onClick={() => AllUserDetails()} type="submit" value="Register" component={Link} to="/"/>
+              <input type="submit" value="Register"  />
             </div>
           </form>
         </div>

@@ -2,6 +2,9 @@ import './App.css';
 
 import {BrowserRouter,Routes,Route,} from "react-router-dom";
 
+
+// import Place from './pages/place/Place';
+// import ViewPlace from './pages/place/ViewPlace';
 import Home from './pages/home/Home';
 import Dashboard from './components/adminDashboard/Dashboard/Dashboard';
 import AllUser from './components/adminDashboard/Dashboard/AllUser';
@@ -25,7 +28,7 @@ function App() {
             <Route path='/feedback' element={<Feedback/>}/>
             <Route path='/bookings' element={<Bookings/>}/>
             <Route path='/profile' element={<Profile/>}/>
-            <Route path='/editprofile/:id' element={<EditProfile/>}/>
+            <Route path="/editprofile/:id" element={<EditProfile/>}/>
 
         </Routes>
     </BrowserRouter>

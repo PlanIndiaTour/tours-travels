@@ -75,7 +75,7 @@ const Navbar = () => {
       {signup && (
         <div className="signin">
           <div className="overlay" onClick={toggleSignup}></div>
-          <Signup />
+          <Signup toggleSignup={toggleSignup} />
         </div>
       )}
     </>

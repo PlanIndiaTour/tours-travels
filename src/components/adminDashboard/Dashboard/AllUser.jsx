@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react';
 import { Table, TableBody, TableCell, TableHead, TableRow, styled, Button } from '@mui/material';
-import React from 'react';
+// import React from 'react';
 
 import AdNavbar from '../AdNavbar/AdNavbar';
 import { getUsers, deleteUser } from '../../../service/api';
-
+import { Link } from "react-router-dom";
 
 
 const StyledTable = styled(Table)`
-width:80%;
+width:100%;
 margin: 90px auto 0 auto;
 `
 const Thead = styled(TableRow)`
@@ -21,7 +21,7 @@ background: #520F54;
 }
 `
 
-const TBody = styled(TableRow)`
+const TRow = styled(TableRow)`
 background: #C6DEFF;
 & > td{
     font-size:20px;
@@ -32,24 +32,27 @@ background: #C6DEFF;
 const AllUser = () => {
 
     const [users, setUsers] = useState([]);
-    useEffect(() =>{
-        getUserDetails( );
-    }, [])
 
-const getUserDetails = async () =>{
-    let response = await getUsers();
-    console.log(response);
-    setUsers(response.data);
-}
+    useEffect(() => {
+        getUserDetails();
+    }, []);
 
-const deleteUserData = async (id) => {
-    await deleteUser(id);
-    getUserDetails();
-}
+    const deleteUserData = async (id) => {
+        await deleteUser(id);
+        getUserDetails();
+    }
 
-    return ( 
+    const getUserDetails = async () => {
+        let response = await getUsers();
+        // console.log(response);
+        setUsers(response.data);
+    }
+
+   
+
+    return (
         <div>
-            <AdNavbar/>
+            <AdNavbar />
             <StyledTable>
                 <TableHead>
                     <Thead >
@@ -64,24 +67,28 @@ const deleteUserData = async (id) => {
                 </TableHead>
 
                 <TableBody>
+
                     {
-                        users.map(user => (
-                            <TBody>
+                        users.map((user) => (
+                            <TRow key={user.id}>
                                 <TableCell>{user.id}</TableCell>
                                 <TableCell>{user.fullname}</TableCell>
                                 <TableCell>{user.email}</TableCell>
                                 <TableCell>{user.contact}</TableCell>
                                 <TableCell>{user.username}</TableCell>
                                 <TableCell>{user.password}</TableCell>
-                                <Button variant="contained" style={{marginTop:12, marginRight:15}} onClick={() => deleteUserData(user.id)}>Delete</Button>
-                            </TBody>
+
+                                <Button component={Link} to={`/editprofile/${user.id}`} variant="contained" style={{ marginTop: 12, marginRight: 15 }}  className="editprofile">Edit Profile</Button>
+                                
+                                <Button variant="contained" style={{ marginTop: 12, marginRight: 15 }} onClick={() => deleteUserData(user.id)}>Delete</Button>
+                            </TRow>
                         ))
-                        }
+                    }
                 </TableBody>
             </StyledTable>
         </div>
-     );
+    );
 }
 
- 
+
 export default AllUser;

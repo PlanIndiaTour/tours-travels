@@ -3,33 +3,42 @@ import "./login.css";
 import { Link } from "react-router-dom";
 import Signup from "../loginSignup/Signup";
 
-const Login = (props) => {
+
+const Login = () => {
+  
+
   const [signup, setSignup] = useState(false);
 
-  const toggleSignup = () => {
+   const toggleSignup = () => {
     setSignup(!signup);
   };
+  
 
   return (
     <>
+           
+      
       <div className="loginContainer">
         <div className="loginHeading">
           <h1>Login To PlanIT</h1>
         </div>
         <div className="loginContent">
           <form
+            
             action="#"
             name="loginform"
             className="loginform"
             id="loginform"
           >
             <div className="userinput">
-              <label for="username">Username</label>
+              <label htmlFor="username">Username</label>
               <input
                 type="text"
                 id="user"
                 name="user"
-                placeholder="username, email, or phonenumber"
+                
+                
+                placeholder="username"
                 required
               />
             </div>
@@ -39,6 +48,7 @@ const Login = (props) => {
                 type="password"
                 id="password"
                 name="password"
+                
                 placeholder="password"
                 required
               />
@@ -49,11 +59,11 @@ const Login = (props) => {
           </form>
         </div>
         <div className="account">
-          <div className="forgotpassword">
+          {/* <div className="forgotpassword">
             <Link to="/" className="fp">
               forgot password?
             </Link>
-          </div>
+          </div> */}
           <div className="donthave">
             <p>
               Don't have a account?{" "}
@@ -71,6 +81,8 @@ const Login = (props) => {
           <Signup />
         </div>
       )}
+      
+      
     </>
   );
 };

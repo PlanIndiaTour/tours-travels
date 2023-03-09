@@ -1,34 +1,53 @@
-import React from 'react';
-import { useState } from "react";
+// import React from 'react';
+import { useState, useEffect } from "react";
 import "./editprofile.css"
-import { signup } from "../../service/api";
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+// import { signup } from "../../service/api";
+import { Link, Navigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { getUsers, editUser } from '../../service/api';
 
-const initialValues ={
+const initialValues = {
     fullname: '',
     email: '',
     contact: '',
     username: '',
     password: ''
-  
-  }
+
+}
 
 const EditProfile = () => {
 
     const [user, setUser] = useState(initialValues);
-  const navigate = useNavigate();
+    const {fullname, email, contact, username, password} = user;
+    const { id } = useParams();
 
-  const onValueChange = (e) => {
-    
-    setUser({...user,[e.target.name]:e.target.value})
-    console.log(user)
-  }
 
-  const AllUserDetails = async () =>{
-    await signup(user);
-    navigate('/');
-  }
+    useEffect(() => {
+        getUserData();
+    }, []);
+
+    const getUserData = async () => {
+        const response = await getUsers(id);
+        setUser(response.data);
+        
+    }
+
+    const editUserDetails = async() => {
+        const response = await editUser(id, user);
+        
+    }
+
+    const onValueChange = (e) => {
+        console.log(e.target.value)
+        setUser({ ...user, [e.target.name]: e.target.value })
+        // console.log(user)
+    }
+
+    // const AllUserDetails = async () => {
+    //     await editUser(user, id);
+    //     navigate('/profile');
+    // }
+
     return (
         <div>
             <div className="signupContainer">
@@ -37,11 +56,12 @@ const EditProfile = () => {
                 </div>
                 <div className="signupContent">
                     <form
-                        action="/"
+                    onSubmit={editUserDetails}
+                        // action="/profile "
                         name="signupForm"
                         className="signupForm"
                         id="signupForm"
-                        method="post"
+                    // method="post"
 
                     >
                         <div className="suserdata">
@@ -53,8 +73,10 @@ const EditProfile = () => {
                                     className="input1"
                                     id="fullname"
                                     name="fullname"
+                                    value={fullname}
                                     placeholder="Enter Full Name"
                                     required
+                                    
                                 />
                                 {/* <i className="fa-solid fa-circle-check"></i> */}
                                 {/* <i className="fa-solid fa-circle-exclamation"></i> */}
@@ -68,8 +90,10 @@ const EditProfile = () => {
                                     className="input"
                                     id="email"
                                     name="email"
+                                    value={email}
                                     placeholder="Enter Email Address"
                                     required
+                                    
                                 />
                                 {/* <i className="fa-solid fa-circle-check"></i> */}
                                 {/* <i className="fa-solid fa-circle-exclamation"></i> */}
@@ -83,8 +107,10 @@ const EditProfile = () => {
                                     className="input"
                                     id="contact"
                                     name="contact"
+                                    value={contact}
                                     placeholder="Enter Contact Number"
                                     required
+                                    
                                 />
                                 {/* <i className="fa-solid fa-circle-check"></i> */}
                                 {/* <i className="fa-solid fa-circle-exclamation"></i> */}
@@ -98,8 +124,10 @@ const EditProfile = () => {
                                     className="input"
                                     id="username"
                                     name="username"
+                                    value={username}
                                     placeholder="Create Username"
                                     required
+                                    
                                 />
                                 {/* <i className="fa-solid fa-circle-check"></i> */}
                                 {/* <i className="fa-solid fa-circle-exclamation"></i> */}
@@ -113,8 +141,10 @@ const EditProfile = () => {
                                     className="input"
                                     id="password"
                                     name="password"
+                                    value={password}
                                     placeholder="Create Password"
                                     required
+                                    
                                 />
                                 {/* <i className="fa-solid fa-circle-check"></i> */}
                                 {/* <i className="fa-solid fa-circle-exclamation"></i> */}
@@ -122,7 +152,7 @@ const EditProfile = () => {
                             </div>
                         </div>
                         <div className="ssubmit">
-                            <input onClick={() => AllUserDetails()} type="submit" value="Submit" component={Link} to="/" />
+                            <input  type="submit" value="Submit"/>
                         </div>
                     </form>
                 </div>
