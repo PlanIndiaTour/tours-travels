@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "fullname": "Akshay Chirme",
+      "fullname": "Akshay Chirme ac",
       "email": "akshay@gmail.com",
       "contact": "12345678",
       "username": "akshaych",
@@ -31,14 +31,6 @@
       "username": "shubham89",
       "password": "898989",
       "id": 4
-    },
-    {
-      "fullname": "kantara",
-      "email": "kantara@gmail.com",
-      "contact": "7777777",
-      "username": "sounthindia",
-      "password": "777777777",
-      "id": 5
     }
   ]
 }

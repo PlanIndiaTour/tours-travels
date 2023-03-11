@@ -37,7 +37,7 @@ const Navbar = () => {
 
           <div className="navItems">
             <span>
-              <Link to="/tourlist">TOUR</Link>
+              <Link to="/tour">TOUR</Link>
             </span>
             <span>
               <Link to="/Destination">DESTINATION</Link>
@@ -69,13 +69,13 @@ const Navbar = () => {
       {login && (
         <div className="login">
           <div className="overlay" onClick={toggleLogin}></div>
-          <Login toggleLogin={toggleLogin()} />
+          <Login />
         </div>
       )}
       {signup && (
         <div className="signin">
           <div className="overlay" onClick={toggleSignup}></div>
-          <Signup />
+          <Signup toggleSignup={toggleSignup} />
         </div>
       )}
     </>

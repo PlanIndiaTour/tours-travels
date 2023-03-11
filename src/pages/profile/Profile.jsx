@@ -1,20 +1,30 @@
 import React from "react";
 
-// import { useState, useEffect } from "react";
-// import { getUsers } from "../../service/api";
+import {useState, useEffect} from "react";
+import { getUsers } from "../../service/api";
 import "./profile.css";
 
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
-
-import bpp from "../../assets/blank-profile-picture.webp";
-
+ 
+import bpp from "./../../assets/munnar.jpg"; 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 
 import { Link } from "react-router-dom";
 
 const Profile = () => {
+    const [users, setUsers] = useState([]);
+    useEffect(() =>{
+        getUserDetails( );
+    }, [])
+
+    const getUserDetails = async () =>{
+        let response = await getUsers();
+        console.log(response);
+        setUsers(response.data);
+    }
+
   return (
     <>
       <Navbar />
@@ -38,6 +48,13 @@ const Profile = () => {
             <Link to="/" className="editprofile">
               Edit Profile
             </Link>
+
+            {users.map(user => (
+            <Link to={`/editprofile/${user.id}`} className="editprofile">
+              Edit Profile
+            </Link>
+            ))
+}
           </div>
         </div>
         <div className="otherprofiledetails">
