@@ -22,17 +22,16 @@ export const getUsers = async (data) => {
 }
 
 export const signup = async (user) => {
-
     try {
         // console.log(API_URL);
         return await axios.post(`${API_URL}/user`, user);
-
     }
     catch (error) {
         console.log('Error in Signup', error.message);
-
     }
 }
+
+
 
 
 export const deleteUser = async (id,user) => {

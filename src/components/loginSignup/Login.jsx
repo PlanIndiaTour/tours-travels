@@ -1,11 +1,66 @@
 import React, { useState } from "react";
 import "./login.css";
 import { Link } from "react-router-dom";
+import Signup from "../loginSignup/Signup";
+import axios from "axios";
 
-import Signup from "./Signup";
-// import Navbar from "../navbar/Navbar";
 
-const Login = ({ toggleLogin, toggleSignup }) => {
+const Login = () => {
+  
+
+  const [signup, setSignup] = useState(false);
+
+   const toggleSignup = () => {
+    setSignup(!signup);
+  };
+  //---------------------------------------------------------------
+  // import {  useState } from "react";
+  // import { useNavigate } from 'react-router-dom';
+  // import axios from "axios";
+   
+   
+  // function Login() {
+    
+      const [email, setEmail] = useState("");
+      const [password, setPassword] = useState("");
+      // const navigate = useNavigate();
+   
+   
+      async function login(e) {
+          e.preventDefault();
+          try {
+            await axios.post("http://localhost:8080/login", {
+              email: email,
+              password: password,
+              }).then((res) =>
+              {
+               console.log(res.data);
+              
+               if (res.data.message == "Email not exits")
+               {
+                 alert("Email not exits");
+               }
+               else if(res.data.message == "Login Success")
+               {
+                  
+                  // <Home/>
+               }
+                else
+               {
+                  alert("Incorrect Email and Password not match");
+               }
+            }, fail => {
+             console.error(fail); // Error!
+    });
+          }
+   
+           catch (err) {
+            alert(err);
+          }
+        
+        }
+
+        //---------------------------------------------------------------
   return (
     <>
       <div className="loginContainer">
@@ -14,29 +69,35 @@ const Login = ({ toggleLogin, toggleSignup }) => {
         </div>
         <div className="loginContent">
           <form
+            onSubmit={login}
             action="#"
             name="loginform"
             className="loginform"
             id="loginform"
+            // method="POST"
           >
             <div className="userinput">
-              <label for="username">Username</label>
+              <label htmlFor="username">Email</label>
               <input
+              onChange={(e) =>{setEmail(e.target.value);}}
                 type="text"
                 id="user"
                 name="user"
-                placeholder="username, email, or phonenumber"
+                placeholder="Email"
                 required
+                value={email}
               />
             </div>
             <div className="userinput">
               <label for="password">Password</label>
               <input
+               onChange={(e) =>{setPassword(e.target.value);}}
                 type="password"
                 id="password"
                 name="password"
                 placeholder="password"
                 required
+                value={password}
               />
             </div>
             <div className="lsubmit">

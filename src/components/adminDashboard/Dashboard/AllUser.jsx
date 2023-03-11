@@ -16,8 +16,9 @@ import { Link } from "react-router-dom";
 
 const StyledTable = styled(Table)`
   width: 100%;
-  margin: 90px auto 0 auto;
+  margin: 90px auto 0 auto;  
 `;
+
 const Thead = styled(TableRow)`
   background: #520f54;
 
