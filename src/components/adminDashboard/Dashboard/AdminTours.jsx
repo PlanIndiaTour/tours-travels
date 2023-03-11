@@ -47,7 +47,7 @@ const AdminTours = () => {
 
   const getToursfromServer = async () => {
     let response = await getTours();
-    // console.log(response);
+    console.log(response);
     setTours(response.data);
     // toast.success("All Tours are loaded");
   };
