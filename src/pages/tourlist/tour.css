@@ -1,0 +1,31 @@
+.TourPage{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    padding: 8vh 0px;
+}
+
+.TourLayout{
+    width: 90vw;
+    min-height: 100vh;
+    background-color: lightcyan;
+    border: 1px solid white;
+    padding: 25px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.TourHead{
+    width: 95%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.TourTitle{
+    font-size: 50px;
+    font-weight: 800;
+}

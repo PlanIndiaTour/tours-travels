@@ -1,0 +1,85 @@
+
+.loginContainer{
+    max-width: 650px;
+    min-width: 500px;
+    background: black;
+    padding: 25px;
+    border: 1px solid rgba(255, 166, 0, 0.625);
+    border-radius: 5px;
+    position: absolute;
+    top: 20%;
+    left: 32%;
+    z-index: 10;
+}
+
+.loginHeading{
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 5px;
+    color: white;
+    border-bottom: 1px solid rgba(255, 166, 0, 0.625);
+}
+
+.loginContent{
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+}
+
+.userinput label{
+    width: 95%;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.userinput{
+    padding: 10px;
+}
+.userinput input{
+    margin-top: 10px;
+    padding: 8px;
+    width: 90%;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+}
+.userinput input:hover{
+    background-color:bisque;
+}
+
+.lsubmit{
+    padding: 10px;
+}
+.lsubmit input{
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    padding: 5px;
+    margin: 10px 0;
+    font-size: 20px;
+    border-radius: 6px;
+    border: none;
+    color: white;
+    background-color: rgba(200, 147, 12, 0.538);
+}
+.lsubmit input:hover{
+    background-color: rgba(255, 166, 1, 0.682);
+}
+
+.account{
+    font-size: 18px;
+    color: white;
+    text-align: center;
+}
+.fp{
+    text-decoration: none;
+    color: aquamarine;
+}
+.su{
+    text-decoration: none;
+    color: cornflowerblue;
+}

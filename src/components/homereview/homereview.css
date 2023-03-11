@@ -1,0 +1,124 @@
+.homereview{
+    width: 100%;
+    height: 95vh;
+    background-color: #caebba;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .recentreview{
+    width: 22%;
+    text-align: center;
+    color: #656e30;
+    font-size: 40px;
+    padding: 20px;
+    position: absolute;
+    /* border: 1px solid #c32f00; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    bottom: 68vh;
+    z-index: 2;
+    /* left: 4vw; */
+  }
+
+  .viewMoreReview{
+    text-decoration: none;
+    border: 1px solid #656e30;
+    padding: 0px 10px;
+    border-radius: 7px;
+    /* background-color: rgba(0,0,0,0.8); */
+    background-color: #656e30;
+    color: #caebba;
+    font-size: 20px;
+  }  
+  
+  .recentreviewcontainer {
+    width: 90%;
+    height: 80vh;
+    position: relative;
+    display: flex;
+    /* text-align: center; */
+    transition: all 0.5s;
+    overflow: hidden;
+    margin-right: 35px;
+    /* border: 1px solid black; */
+    left: 7%;
+    /* gap: 21px; */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .rrc1{
+    width: 99.5%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    position: absolute;
+    /* border:1px solid blue; */
+    gap: 342px;
+  }
+  .rrc2{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    position: absolute;
+    /* left: -0px; */
+    top: 33%;
+    gap: 342px;
+    /* border: 1px solid aqua; */
+  }
+  .rreviewBG{
+    width: 350px;
+    z-index: 0;
+  transform: rotate(358deg);
+  }
+
+.rreviewtext{
+  z-index: 1;
+  width: 290px;
+  position: relative;
+  bottom: 335px;
+  left: 20px;
+  /* transform: rotate(2deg); */
+}
+
+.cname{
+  font-size: 22px;
+  color: #495022;
+  position: relative;
+  text-align: center;
+}
+.rdate{
+  color: #656e30;
+  padding-bottom: 10px;
+  text-align: center;
+}
+.tname{
+  color: #495022;
+  text-decoration: none;
+  font-size: 22px;
+}
+.tname:hover{
+  color: #ce0d2d;
+}
+.rreviewshort{
+  color: #656e30;
+}
+.dc{
+  font-size: 25px;
+  color: #495022;
+}
+
+.star{
+  /* position: absolute; */
+  text-align: center;
+  font-size: 25px;
+  color: goldenrod;
+}

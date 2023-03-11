@@ -1,0 +1,243 @@
+
+.footerContainer{
+    background-color: black;
+    padding: 40px 0 32px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.9;
+}
+
+.footerContainer:hover{
+    background-color: black;
+    opacity: 1;
+}
+
+.footerSubscription{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    margin-bottom: 24px;
+    padding: 24px;
+    color: #fff;
+}
+
+.footerSubscription-text{
+    margin-bottom: 24px;
+    font-size: 20px;
+}
+
+.footerSubHeading{
+    margin-bottom: 24px;
+    font-size: 24px;
+}
+
+/* .footerSubHeading:hover{
+    margin-bottom: 24px;
+    font-size: 24px;
+    color: lightpink;
+} */
+
+.footerInput{
+    padding: 8px 20px;
+    border-radius: 2px;
+    margin-right: 10px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    margin-bottom: 16px;
+    border: 1px solid #fff;
+}
+
+.footerInput:hover{
+    padding: 8px 20px;
+    border-radius: 2px;
+    margin-right: 10px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    margin-bottom: 16px;
+    border: 1px solid lightpink;
+    background-color: lightpink;
+}
+
+.footerInput::placeholder{
+    color: rgb(25, 25, 25);
+}
+
+.footerBtn{
+    color: white;
+    width: 100px;
+    height: 40px;
+    background-color: var(--primary);
+    background-color: transparent;
+    border: 1px solid white;
+    transition: all 0.3s ease-out;
+    font-size: 20px;
+    text-decoration: none;
+}
+.footerBtn:hover{
+    color: lightpink;
+    width: 100px;
+    height: 40px;
+    background-color: var(--primary);
+    background-color: transparent;
+    border: 1px solid white;
+    transition: all 0.3s ease-out;
+    font-size: 21px;
+    text-decoration: none;
+}
+
+.footerLinks{
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+}
+
+.footerLinkWrapper{
+    display: flex;
+    align-items: center;
+}
+
+.footerLinkItems{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 16px;
+    text-align: left;
+    width: 280px;
+    box-sizing: border-box;
+}
+
+.footerLinkItems h2{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.footerLinkItems > h2{
+   color: #fff;
+}
+
+.footerLinkItems a{
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 8px;
+}
+
+.footerLinkItems a:hover{
+    color: lightpink;
+    transition: 0.3s ease-out;
+}
+
+.footerEmailForm h2{
+    margin-bottom: 32px;
+}
+
+.socialIconLink{
+    color: #fff;
+    font-size: 25px;
+}
+
+.socialIconLink:hover{
+    color: lightpink;
+    font-size: 25px;
+}
+
+.socialMedia{
+    max-width: 1000px;
+    width: 100%;
+}
+
+.socialMediaWrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    margin: 25px auto 0 auto;
+}
+
+.socialIcons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 250px;
+    margin-top: 30px;
+}
+
+.socialIcons:hover{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 250px;
+    color: lightpink;
+}
+
+/* .SocialLogo{
+    color: #fff;
+    justify-content: start;
+    margin-left: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+.SocialLogo:hover{
+    color: lightcoral;
+    justify-content: start;
+    margin-left: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+} */
+
+.websiteRights{
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+.websiteRights:hover{
+    color: lightpink;
+    margin-bottom: 20px;
+}
+
+#footerlogo{
+    width: 125px;
+    margin: 20px;
+}
+#footerlogo:hover{
+    width: 125px;
+}
+
+#gmap_canvas{
+    border-radius: 15px;
+}
+
+@media screen and (max-width: 820px) {
+    .footerLinks{
+        padding-top: 32px;
+    }
+
+    .footerBtn{
+        width: 50%;
+    }
+
+    .footerLinkWrapper{
+        flex-direction: column ;
+    }
+
+    .footerLinks{
+        flex-direction: column ;
+    }
+}
