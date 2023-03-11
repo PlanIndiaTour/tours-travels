@@ -31,9 +31,6 @@ export const signup = async (user) => {
     }
 }
 
-
-
-
 export const deleteUser = async (id,user) => {
     try {
         return await axios.delete(`${API_URL}/user/${id}` );
@@ -41,7 +38,6 @@ export const deleteUser = async (id,user) => {
         console.log('Error while deleting user in api', error.message);
     }
 }
-
 
 export const editUser = async (id, user) => {
     try {
@@ -51,43 +47,9 @@ export const editUser = async (id, user) => {
     }
 }
 
-// export const getUser = async (data) => {
-//     try {
-//         return await axios.get(`${API_URL}/users`,data);
-//     } catch (error) {
-//         console.log('Error while editing single user in api', error.message);
-//     }
-// }
 
-import axios from "axios";
+// _______________________________________________________________________________________________________
 
-const API_URL = "http://localhost:8080";
-
-export const signup = async (data) => {
-  try {
-    return await axios.post(API_URL, data);
-  } catch (error) {
-    console.log("Error in Signup", error.message);
-  }
-};
-
-export const getUsers = async () => {
-  try {
-    return await axios.get(API_URL);
-  } catch (error) {
-    console.log("Error in view user", error.message);
-  }
-};
-
-export const deleteUser = async (id) => {
-  try {
-    return await axios.delete(`${API_URL}/${id}`);
-  } catch (error) {
-    console.log("Error while deleting user in api", error.message);
-  }
-};
-
-// _______________________________________________________________
 
 export const getTours = async (data) => {
   try {
