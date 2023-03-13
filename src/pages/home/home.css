@@ -1,5 +1,9 @@
-.empty{
-    width: 100vw;
+section {
+    scroll-snap-align: start;
+}
+
+.homecontainer {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
     height: 100vh;
-    background: #dafff6;
 }

@@ -1,28 +1,29 @@
 import React from "react";
 import { useState } from "react";
-import { addTour } from "../../../service/api";
+import { Link } from "react-router-dom";
+import { addDestination } from "../../../service/api";
 import "./cssDestination.css";
 
 const initialValues = {
   title: "",
   description: "",
-  itinerary: "",
-  price: "",
-  days: "",
+  city: "",
+  citydescription: "",
 };
 
-const AddTour = ({ toggleAddDestination }) => {
-  const [tour, setTour] = useState(initialValues);
-  const { title, description, itinerary, price, days } = tour;
+const AddDestination = ({ toggleAddDestination }) => {
+  const [desti, setDesti] = useState(initialValues);
+  const { title, description, city, citydescription } = desti;
 
   const onValueChange = (e) => {
-    setTour({ ...tour, [e.target.name]: e.target.value });
+    setDesti({ ...desti, [e.target.name]: e.target.value });
     // console.log(user)
   };
 
-  const AllTourDetails = async (e) => {
+  const AllDestiDetails = async (e) => {
     e.preventDefault();
-    await addTour(tour);
+    //---------------------------------------------kartik
+    await addDestination(desti);
     toggleAddDestination();
   };
 
@@ -30,7 +31,7 @@ const AddTour = ({ toggleAddDestination }) => {
     <>
       <div className="form-main">
         <div className="form-div">
-          <form onSubmit={AllTourDetails} className="form" id="form1">
+          <form onSubmit={AllDestiDetails} className="addDataform" id="form1">
             <p className="text">
               <input
                 onChange={(e) => onValueChange(e)}
@@ -48,43 +49,32 @@ const AddTour = ({ toggleAddDestination }) => {
                 onChange={(e) => onValueChange(e)}
                 value={description}
                 name="description"
-                className="validate[required,length[6,300]] feedback-input"
+                // className="validate[required,length[6,300]] feedback-input"
                 id="comment"
                 placeholder="Description"
               ></textarea>
             </p>
 
             <p className="text">
-              <textarea
-                onChange={(e) => onValueChange(e)}
-                value={itinerary}
-                name="itinerary"
-                className="validate[required,length[6,300]] feedback-input"
-                id="comment"
-                placeholder="Itinerary"
-              ></textarea>
-            </p>
-
-            <p className="text">
               <input
                 onChange={(e) => onValueChange(e)}
-                value={price}
-                name="price"
-                type="number"
+                value={city}
+                name="city"
+                type="text"
                 // className="validate[required,custom[email]] feedback-input"
-                id="name"
-                placeholder="Price"
+                id="city"
+                placeholder="City"
               />
             </p>
 
             <p className="text">
               <textarea
                 onChange={(e) => onValueChange(e)}
-                value={days}
-                name="days"
+                value={citydescription}
+                name="citydescription"
                 className="validate[required,length[6,300]] feedback-input"
                 id="comment"
-                placeholder="Days"
+                placeholder="City Description"
               ></textarea>
             </p>
 
@@ -99,4 +89,4 @@ const AddTour = ({ toggleAddDestination }) => {
   );
 };
 
-export default AddTour;
+export default AddDestination;
