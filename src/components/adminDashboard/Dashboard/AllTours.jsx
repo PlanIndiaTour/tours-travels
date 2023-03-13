@@ -119,3 +119,5 @@ const AllTours = () => {
 };
 
 export default AllTours;
+
+export default AllTours;

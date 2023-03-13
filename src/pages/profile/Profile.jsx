@@ -28,33 +28,33 @@ const Profile = () => {
   return (
     <>
       <Navbar />
-      <div className="profilepage">
+      {users.map((user) => (
+      <div className="profilepage"key={user.id}>
         <div className="profileimage">
           <img src={bpp} alt="profile_picture" className="profileimage"></img>
         </div>
         <div className="profiledetails">
-          <div className="profilename">OMKAR MALI</div>
+          <div className="profilename">{user.fullname}</div>
           <div className="profilecontactdetails">
             <div className="profilecontact">
               <FontAwesomeIcon icon={faEnvelope} />
-              <div className="pcmail">omkarmali@gmail.com</div>
+              <div className="pcmail">{user.email}</div>
             </div>
             <div className="profilecontact">
               <FontAwesomeIcon icon={faPhone} />
-              <div className="pcphone">9689467225</div>
+              <div className="pcphone">{user.contact}</div>
             </div>
           </div>
           <div className="editprofile">
-            <Link to="/" className="editprofile">
+            {/* <Link to="/" className="editprofile">
               Edit Profile
-            </Link>
+            </Link> */}
 
-            {users.map(user => (
+            {/* {users.map(user => ( */}
             <Link to={`/editprofile/${user.id}`} className="editprofile">
               Edit Profile
             </Link>
-            ))
-}
+            {/* ))} */}
           </div>
         </div>
         <div className="otherprofiledetails">
@@ -62,7 +62,7 @@ const Profile = () => {
             <div className="myBHeading">MY BOOKINGS :</div>
           </div>
         </div>
-      </div>
+      </div>))}
       <Footer />
     </>
   );

@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:8080";
+const API_URL = 'http://localhost:8080';
+export default API_URL;
 
 export const getUser = async (id) => {
   id = id || "";
@@ -104,4 +105,20 @@ export const getTour = async (id) => {
   } catch (error) {
     console.log("Error in view tour api", error.message);
   }
-};
+
+  export const getTour = async (id) => {
+    id = id || '';
+    try {
+        return await axios.get(`${API_URL}/tours/${id}`);
+    } catch (error) {
+        console.log('Error in view tour api', error.message);
+    }
+}
+// export const getUser = async (id) => {
+//   id = id || '';
+//   try {
+//       return await axios.get(`${API_URL}/users/${id}`);
+//   } catch (error) {
+//       console.log('Error in view user api', error.message);
+//   }
+// }

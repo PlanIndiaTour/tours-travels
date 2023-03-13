@@ -17,6 +17,10 @@ import Tourlist from './pages/tourlist/Tourlist';
 import Aboutus from './pages/aboutus/Aboutus';
 import AllDestinations from './components/adminDashboard/Dashboard/AllDestinations';
 import ReviewList from './pages/Reviewslist/ReviewList';
+import Tour from './pages/tourlist/Tour';
+import Destination from './pages/destinationlist/Destination';
+import Destinationlist from './pages/destinationlist/Destinationlist';
+
 
 function App() {
   return (
@@ -36,12 +40,21 @@ function App() {
 
             <Route path='/Dashboard' element={<Dashboard/>}/>
             <Route path='/allUser' element={<AllUser/>}/>
+            {/* <Route path='/destinations' element={<Destinations/>}/> */}
             <Route path='/alldestinations' element={<AllDestinations/>}/>
             <Route path='/alltours' element={<AllTours/>}/>
             <Route path='/feedback' element={<Feedback/>}/>
             <Route path='/bookings' element={<Bookings/>}/>
-            <Route path='/editprofile/:id' element={<EditProfile/>}/>
-
+            <Route path='/profile/:id' element={<Profile/>}/>
+            <Route path="/editprofile/:id" element={<EditProfile/>}/>
+            <Route path='/addDestination' element={<AddDestination/>}/>
+            <Route path='/allDestinations' element={<AllDestinations/>}/>
+            <Route path='/allTours' element={<AllTours/>}/>
+            <Route path='/addTour' element={<AddTour/>}/>
+            <Route path='/tourlist' element={<Tourlist/>}/>
+            <Route path='/tour/:id' element={<Tour/>}/>
+            <Route path='/destinationlist' element={<Destinationlist/>}/>
+            <Route path='/destination/:id' element={<Destination/>}/>
         </Routes>
     </BrowserRouter>
   );

@@ -3,19 +3,20 @@ import { Link } from "react-router-dom";
 
 import "./tourlistcomponent.css";
 
-const TourlistComponent = () => {
+
+const TourlistComponent = ({tour}) => {
   return (
     <>
       <div className="TourlistComponent">
         <div className="tourlistimg">img</div>
         <div className="tourlistdisc">
-          <div className="tourlisttitle">Title</div>
-          <div className="tourlistdescription">Description</div>
+          <div className="tourlisttitle">{tour.title}</div>
+          <div className="tourlistdescription">{tour.description}</div>
         </div>
         <div className="tourlistbook">
-          <div className="tourlistprice">25000</div>
-          <div className="tourlistdays">4days</div>
-          <Link to="/tour" className="tourlistviewmore">
+          <div className="tourlistprice">{tour.price}</div>
+          <div className="tourlistdays">{tour.days}</div>
+          <Link to="/tourlist" className="tourlistviewmore">
             ViewMore
           </Link>
         </div>

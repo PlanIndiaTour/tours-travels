@@ -3,6 +3,7 @@ import "./login.css";
 import { Link } from "react-router-dom";
 import Signup from "../loginSignup/Signup";
 import axios from "axios";
+import Home from "../../pages/home/Home";
 
 
 const Login = () => {
@@ -13,6 +14,8 @@ const Login = () => {
    const toggleSignup = () => {
     setSignup(!signup);
   };
+
+
   //---------------------------------------------------------------
   // import {  useState } from "react";
   // import { useNavigate } from 'react-router-dom';
@@ -42,8 +45,8 @@ const Login = () => {
                }
                else if(res.data.message == "Login Success")
                {
-                  
-                  // <Home/>
+                alert("Login successfull");
+                
                }
                 else
                {
@@ -57,7 +60,7 @@ const Login = () => {
            catch (err) {
             alert(err);
           }
-        
+          
         }
 
         //---------------------------------------------------------------
@@ -69,7 +72,7 @@ const Login = () => {
         </div>
         <div className="loginContent">
           <form
-            onSubmit={login}
+            // onSubmit={login}
             action="#"
             name="loginform"
             className="loginform"
@@ -101,9 +104,13 @@ const Login = () => {
               />
             </div>
             <div className="lsubmit">
-              <input type="submit" value="Log in" />
+              {/* <input type="submit" value="Log in" /> */}
+              <Link to="/" onClick={login} className="ssubmit">
+                <input type="submit" value="Log in" />
+              </Link>
+
             </div>
-          </form>
+          </form> 
         </div>
         <div className="account">
           <div className="forgotpassword">

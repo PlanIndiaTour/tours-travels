@@ -116,3 +116,5 @@ const AllDestinations = () => {
 };
 
 export default AllDestinations;
+
+export default AllDestinations;

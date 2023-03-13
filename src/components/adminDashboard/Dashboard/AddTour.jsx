@@ -95,8 +95,12 @@ const AddTour = ({ toggleAddDestination }) => {
           </form>
         </div>
       </div>
-    </>
-  );
-};
-
-export default AddTour;
+    </form>
+  </div>
+  </div>
+  
+      </>
+    );
+  };
+  
+  export default AddTour;

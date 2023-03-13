@@ -13,7 +13,7 @@ import Homereview from "../../components/homereview/Homereview";
 
 const Home = () => {
   return (
-    <>
+    <div>
       <Navbar />
       <div className="homecontainer">
         <section>
