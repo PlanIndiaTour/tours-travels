@@ -20,7 +20,7 @@ const initialValues = {
 
 const Tour = () => {
   const [tour, setTour] = useState([initialValues]);
-  const { title, description, itinerary, price, days } = tour;
+  // const { title, description, itinerary, price, days } = tour;
   const { id } = useParams();
 
   useEffect(() => {
@@ -36,11 +36,6 @@ const Tour = () => {
     const response = await getTour(id);
   };
 
-  const onValueChange = (e) => {
-    console.log(e.target.value);
-    setTour({ ...tour, [e.target.name]: e.target.value });
-    // console.log(user)
-  };
 
   // const [tours, setTours] = useState([]);
   // useEffect(() =>{
@@ -59,26 +54,19 @@ const Tour = () => {
         <Navbar />
 
         <div className="TourPage">
-          {/* {tours.map((tour) => (  */}
-          <form>
             <div className="TourLayout" key={tour.id}>
               <div className="TourHead">
                 <div className="TourImg">
                   <img src={img} className="TourImg"></img>
                 </div>
-                <input
-                  className="TourTitle"
-                  name="title"
-                  value={title}
-                  onChange={(e) => onValueChange(e)}
-                ></input>
+                <div className="TourTitle">{tour.title}</div>
               </div>
               <div className="TourBody">
-                <div className="TourDiscription">
-                  <input value={tour.description} />
-                </div>
+                <div className="itiday">DESCRIPTION</div>
+                <div className="TourDiscription">{tour.description}</div>
                 <div className="itiday">ITINERARY</div>
                 <div className="TourItinerary">{tour.itinerary}</div>
+
                 <div className="TourDays">{tour.price}</div>
                 <div className="TourPrice">{tour.days}</div>
                 <Link to="book" className="TourBook">
@@ -86,10 +74,7 @@ const Tour = () => {
                 </Link>
               </div>
             </div>
-            {/* ))} */}
-          </form>
         </div>
-
         <Footer />
       </div>
     </>
