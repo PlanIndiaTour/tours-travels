@@ -24,7 +24,7 @@ const Homedestinations = () => {
           </Link>
         </div>
         <div className="viewmoredestinations">
-          <Link to="/" className="vmdlink">
+          <Link to="/destinationlist" className="vmdlink">
             View More
           </Link>
         </div>

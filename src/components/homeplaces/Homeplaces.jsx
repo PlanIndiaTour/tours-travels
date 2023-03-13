@@ -10,27 +10,27 @@ const Homeplaces = () => {
       <div class="homeplaces">
         <div className="popularPlaces">
           POPULAR PLACES
-          <Link to="placesList" className="viewMorePlaces">
+          <Link to="/destinationlist" className="viewMorePlaces">
             View More
           </Link>
         </div>
         <div class="slider">
-          <Link to="/pune" class="slide s1">
+          <Link to="/" class="slide s1">
             AMER FORT
             {/* <div className="slideText">AMER FORT</div> */}
           </Link>
-          <Link to="/pune" class="slide s2">
+          <Link to="/" class="slide s2">
             GOLDEN TEMPLE
             {/* <div className="slideText">GOLDEN TEMPLE</div> */}
           </Link>
           {/* <Link to="/pune" class="slide s3">
             <div className="slideText">TAJ MAHAL</div>
           </Link> */}
-          <Link to="/pune" class="slide s3">
+          <Link to="/" class="slide s3">
             MYSORE PALACE
             {/* <div className="slideText">MYSORE PALACE</div> */}
           </Link>
-          <Link to="/pune" class="slide s4">
+          <Link to="/" class="slide s4">
             BUDDHA PARK
             {/* <div className="slideText">BUDDHA PARK</div> */}
           </Link>

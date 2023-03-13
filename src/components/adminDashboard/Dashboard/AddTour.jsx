@@ -11,7 +11,7 @@ const initialValues = {
   days: "",
 };
 
-const AddTour = ({ toggleAddDestination }) => {
+const AddTour = () => {
   const [tour, setTour] = useState(initialValues);
   const { title, description, itinerary, price, days } = tour;
 
@@ -23,7 +23,7 @@ const AddTour = ({ toggleAddDestination }) => {
   const AllTourDetails = async (e) => {
     e.preventDefault();
     await addTour(tour);
-    toggleAddDestination();
+    window.location.reload(false);
   };
 
   return (

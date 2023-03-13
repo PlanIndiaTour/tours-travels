@@ -6,7 +6,6 @@ import "./profile.css";
 
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
- 
 import bpp from "./../../assets/munnar.jpg"; 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
@@ -46,11 +45,6 @@ const Profile = () => {
             </div>
           </div>
           <div className="editprofile">
-            {/* <Link to="/" className="editprofile">
-              Edit Profile
-            </Link> */}
-
-            {/* {users.map(user => ( */}
             <Link to={`/editprofile/${user.id}`} className="editprofile">
               Edit Profile
             </Link>

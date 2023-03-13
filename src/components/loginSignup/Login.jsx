@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 import "./login.css";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import Signup from "../loginSignup/Signup";
 import axios from "axios";
 import Home from "../../pages/home/Home";
 
 
-const Login = () => {
-  
 
+
+
+const Login = ({toggleLogin}) => {
+  
+  // const navigate = useNavigate();
   const [signup, setSignup] = useState(false);
 
    const toggleSignup = () => {
@@ -41,13 +44,18 @@ const Login = () => {
               
                if (res.data.message == "Email not exits")
                {
-                 alert("Email not exits");
+                 alert("Empty Email OR Email does not exits");
                }
                else if(res.data.message == "Login Success")
                {
                 alert("Login successfull");
-                
+                // navigate("/");
                }
+              //  else if(res.data.message == "Login Success")
+              //  {
+              //   alert("Login successfull");
+              //   // navigate("/");
+              //  }
                 else
                {
                   alert("Incorrect Email and Password not match");
@@ -61,6 +69,9 @@ const Login = () => {
             alert(err);
           }
           
+          finally{
+    toggleLogin();
+          }
         }
 
         //---------------------------------------------------------------

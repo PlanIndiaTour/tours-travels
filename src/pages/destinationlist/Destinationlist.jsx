@@ -3,8 +3,7 @@ import "./destinationlist.css";
 import { Link } from "react-router-dom";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
-import { getDestination } from "../../service/api";
-
+import { getDestis } from "../../service/api";
 
 const Destinationlist = () => {
   const [destinations, setDestinations] = useState([]);
@@ -14,41 +13,44 @@ const Destinationlist = () => {
   }, []);
 
   const getDestinationDetails = async () => {
-    let response = await getDestination();
+    let response = await getDestis();
     setDestinations(response.data);
   };
- 
 
   return (
     <>
-     
       <div>
         <Navbar />
-        
-        <div className="tourlist">
-        {destinations.map((destination) => (
-        <div key={destination} className="TourlistComponent">
-        <div className="tourlistimg">img</div>
-        <div className="tourlistdisc">
-          <div className="tourlisttitle">{destination.title}</div>
-          <div className="tourlistdescription">{destination.description}</div>
-        </div>
-        <div className="tourlistbook">
-          <div className="tourlistprice">{destination.city}</div>
-          <div className="tourlistdays">{destination.citydescription}</div>
-          
-            <Link to={`/destination/${destination.id}`} className="tourlistviewmore">
-              ViewMore
-            </Link>
-            
+        <div className="tourlistPageTitle">Explore Destinations</div>
+        <div className="destilist">
+          {destinations.map((destination) => (
+            <div key={destination} className="destilistComponent">
+              <div className="destilistimg">img</div>
+              <div className="destilistdisc">
+                <div className="destilisttitle">{destination.title}</div>
+                <div className="destilistdescription">
+                  {destination.description}
+                </div>
+              </div>
+              <div className="destilistbook">
+                {/* <div className="destilistprice">{destination.city}</div>
+                <div className="destilistdays">
+                  {destination.citydescription}
+                </div> */}
 
-        </div>
-      </div>
-      ))}
+                <Link
+                  to={`/destination/${destination.id}`}
+                  className="destilistviewmore"
+                >
+                  Know more
+                </Link>
+              </div>
+            </div>
+          ))}
         </div>
         <Footer />
       </div>
-    </> 
+    </>
   );
 };
 

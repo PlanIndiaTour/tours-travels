@@ -11,7 +11,7 @@ const initialValues = {
   citydescription: "",
 };
 
-const AddDestination = ({ toggleAddDestination }) => {
+const AddDestination = () => {
   const [desti, setDesti] = useState(initialValues);
   const { title, description, city, citydescription } = desti;
 
@@ -24,7 +24,7 @@ const AddDestination = ({ toggleAddDestination }) => {
     e.preventDefault();
     //---------------------------------------------kartik
     await addDestination(desti);
-    toggleAddDestination();
+    window.location.reload(false);
   };
 
   return (

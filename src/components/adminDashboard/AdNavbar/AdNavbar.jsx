@@ -24,7 +24,7 @@ const AdNavbar = () => {
         <Tabs to="/alldestinations">Destinations</Tabs>
         <Tabs to="/alltours">Tours</Tabs>
         <Tabs to="/bookings">Bookings</Tabs>
-        <Tabs to="/feedback">Feedbacks</Tabs>
+        <Tabs to="/adReview">Reviews</Tabs>
         <Tabs to="/">PlanIT</Tabs>
       </Toolbar>
     </Header>

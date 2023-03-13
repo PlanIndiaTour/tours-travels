@@ -14,8 +14,8 @@ public interface UserService {
 	public List<User> getUsers();
 	
 	public User getUser(long userId);
+	
 	public User signup(UserDTO userDTO);
-//	public User signup(User user);
 	
 	public User updateUser(User user);
 

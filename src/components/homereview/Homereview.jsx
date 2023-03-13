@@ -12,7 +12,7 @@ const homereview = () => {
       <div className="homereview">
         <div className="recentreview">
           RECENT REVIEWS
-          <Link to="/reviewList" className="viewMoreReview">
+          <Link to="/reviews" className="viewMoreReview">
             View More
           </Link>
         </div>

@@ -31,7 +31,8 @@ const Thead = styled(TableRow)`
 `;
 
 const TRow = styled(TableRow)`
-  background: #c6deff;
+  background: #c6deff; wordWrap: 'break-word',
+  maxWidth: 1000,
   & > td {
     font-size: 20px;
   }
@@ -82,7 +83,7 @@ const AllUser = () => {
                 <TableCell>{user.username}</TableCell>
                 <TableCell>{user.password}</TableCell>
 
-                <Button
+                {/* <Button
                   component={Link}
                   to={`/editprofile/${user.id}`}
                   variant="contained"
@@ -90,7 +91,7 @@ const AllUser = () => {
                   className="editprofile"
                 >
                   Edit Profile
-                </Button>
+                </Button> */}
 
                 {/* <Link to="/profile" onClick={deleteUserData(user.id)} className="ssubmit">
                 <input type="submit" value="Submit" />

@@ -11,7 +11,7 @@ import {
 import React from "react";
 import { Link } from "react-router-dom";
 import AdNavbar from "../AdNavbar/AdNavbar";
-import { getDestination, deleteDesti } from "../../../service/api";
+import { getDestis, deleteDesti } from "../../../service/api";
 import { Box } from "@mui/system";
 // import AddTour from "./AddTour";
 import AddDestination from "./AddDestination";
@@ -32,7 +32,8 @@ const Thead = styled(TableRow)`
 `;
 
 const TRow = styled(TableRow)`
-  background: #c6deff;
+  background: #c6deff; wordWrap: 'break-word',
+  maxWidth: 1000,
 
   & > td {
     font-size: 20px;
@@ -48,7 +49,7 @@ const AllDestinations = () => {
   }, []);
 
   const getDestiDetails = async () => {
-    let response = await getDestination();
+    let response = await getDestis();
     // console.log(response);
     setDestis(response.data);
     // toast.success("All Tours are loaded");

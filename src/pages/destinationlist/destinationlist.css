@@ -1,7 +1,118 @@
-.tourlist{
-    display: flex;
-    flex-direction: column;
-    background-color: #F9D8D6;
-    align-items: center;
-    padding: 50px 0px;
+.destilistPageTitle {
+  text-align: center;
+  font-size: 35px;
+  font-weight: 700;
+  background-color: #f5f5f5;
+  padding-top: 25px;
+}
+
+.destilist {
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+  align-items: center;
+  padding: 20px 0px;
+}
+
+.destilistComponent {
+  width: 70vw;
+  min-height: 40vh;
+  /* border: 1px solid black; */
+  border-radius: 20px;
+  display: flex;
+  /* justify-content: center; */
+  /* padding: 20px; */
+  margin: 20px;
+  background-color: white;
+  box-shadow: 0 0 40px #00000012;
+}
+
+.destilistimg {
+  width: 28%;
+  /* height: 100%; */
+  /* border: 1px solid black; */
+  border-radius: 10px;
+  position: relative;
+  margin: 20px;
+  background: url(./../../assets/DabhosaWaterfall_jawhar.jpg);
+  background-size: cover;
+}
+
+.destilistdisc {
+  width: 44%;
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  padding: 5px;
+}
+
+.destilisttitle {
+  height: 25%;
+  font-size: 30px;
+  font-weight: 600;
+  /* border: 1px solid black; */
+  padding-top: 10px;
+}
+
+.destilistdescription {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.destilistbook {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: right; */
+  /* border: 1px solid #d0dfff; */
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #f5f8ff;
+  padding: 20px 20px 20px 20px;
+  /* text-align: right; */
+  margin-left: 10px;
+}
+.destilistprice {
+  height: 55%;
+  font-size: 20px;
+  text-align: right;
+  padding-top: 40px;
+  padding-right: 20px;
+  /* border: 1px solid purple; */
+}
+
+.destilistprice p {
+  font-size: 16px;
+  font-weight: 400px;
+  color: gray;
+}
+
+/* .destilistdays {
+  height: 20%;
+  font-size: 18px;
+  text-align: right;
+  border: 1px solid purple;
+} */
+
+.viewsingledesti {
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid red; */
+}
+
+.destilistviewmore {
+  width: 50%;
+  color: #f5f8ff;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 7px 0px;
+  border: 1px solid #ffd800;
+  background-color: #ffd800;
+  border-radius: 5px;
 }

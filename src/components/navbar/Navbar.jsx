@@ -66,7 +66,7 @@ const Navbar = () => {
       {login && (
         <div className="login">
           <div className="overlay" onClick={toggleLogin}></div>
-          <Login />
+          <Login toggleLogin={toggleLogin}/>
         </div>
       )}
       {signup && (

@@ -95,6 +95,16 @@ export const getDestis = async (data) => {
     }
 }
 
+
+export const editDestination = async (id, desti) => {
+  try {
+      return await axios.put(`${API_URL}/destination`, desti);
+  } catch (error) {
+      console.log('Error while editing user in api', error.message);
+  }
+}
+
+
 //--------------------------------------TOURS---------------------------------------
 
 export const getTours = async (data) => {
@@ -131,6 +141,8 @@ export const getTours = async (data) => {
         console.log('Error in view tour api', error.message);
     }
 }
+
+
 // export const getUser = async (id) => {
 //   id = id || '';
 //   try {
@@ -139,3 +151,78 @@ export const getTours = async (data) => {
 //       console.log('Error in view user api', error.message);
 //   }
 // }
+
+//--------------------------------------REVIEWS---------------------------------------
+
+
+export const getReview = async (id) => {
+  id = id || '';
+  try {
+      return await axios.get(`${API_URL}/reviews/${id}`);
+  } catch (error) {
+      console.log('Error in view Review api', error.message);
+  }
+}
+
+export const getReviews = async (data) => {
+  // id = id || '';
+  try {
+      return await axios.get(`${API_URL}/reviews`,data)
+  } catch (error) {
+      console.log('Error in view Review', error.message);
+  }
+}
+
+export const addReview = async (review) => {
+  try {
+      // console.log(API_URL);
+      return await axios.post(`${API_URL}/review`, review);
+  }
+  catch (error) {
+      console.log('Error in review', error.message);
+  }
+}
+
+
+export const deleteReview = async (id,review) => {
+  try {
+      return await axios.delete(`${API_URL}/review/${id}` );
+  } catch (error) {
+      console.log('Error while deleting review in api', error.message);
+  }
+}
+
+//----------------------------BOOKING---------------------------------------------------------------------
+
+export const getBookings = async (data) => {
+  try {
+    return await axios.get(`${API_URL}/bookings`, data);
+  } catch (error) {
+    console.log("Error in view Bookings", error.message);
+  }
+};
+
+export const bookTour = async (booking) => {
+  try {
+    return await axios.post(`${API_URL}/booktour`, booking);
+  } catch (error) {
+    console.log("Error in booking", error.message);
+  }
+};
+
+export const deleteBooking = async (id, booking) => {
+  try {
+    return await axios.delete(`${API_URL}/booking/${id}`);
+  } catch (error) {
+    console.log("Error while cancelling booking in api", error.message);
+  }
+};
+
+export const getSingleBooking = async (id) => {
+  id = id || "";
+  try {
+    return await axios.get(`${API_URL}/bookings/${id}`);
+  } catch (error) {
+    console.log("Error in view booking api", error.message);
+  }
+};

@@ -13,7 +13,7 @@ import ReviewList from './pages/Reviewslist/ReviewList';
 
 import Dashboard from './components/adminDashboard/Dashboard/Dashboard';
 import AllUser from './components/adminDashboard/Dashboard/AllUser';
-import Feedback from './components/adminDashboard/Dashboard/Feedback';
+
 import Bookings from './components/adminDashboard/Dashboard/Bookings';
 // import Profile from './pages/profile/Profile';
 import EditProfile from './pages/profile/EditProfile';
@@ -25,6 +25,9 @@ import Tourlist from './pages/tourlist/Tourlist';
 import Tour from './pages/tourlist/Tour';
 import Destinationlist from './pages/destinationlist/Destinationlist';
 import Destination from './pages/destinationlist/Destination';
+import Reviews from './components/adminDashboard/Dashboard/Reviews';
+import EditDestination from './components/adminDashboard/Dashboard/EditDestination';
+import BookTour from './pages/BookTour/BookTour';
 
 
 
@@ -41,11 +44,10 @@ function App() {
             <Route path='/reviews' element={<ReviewList/>}/>
 
 
-
-
             <Route path='/Dashboard' element={<Dashboard/>}/>
             <Route path='/allUser' element={<AllUser/>}/>
-            <Route path='/feedback' element={<Feedback/>}/>
+            <Route path='/adReview' element={<Reviews/>}/>
+            <Route path='/booktour' element={<BookTour/>}/>
             <Route path='/bookings' element={<Bookings/>}/>
             <Route path='/profile/:id' element={<Profile/>}/>
             <Route path="/editprofile/:id" element={<EditProfile/>}/>
@@ -57,6 +59,8 @@ function App() {
             <Route path='/tour/:id' element={<Tour/>}/>
             <Route path='/destinationlist' element={<Destinationlist/>}/>
             <Route path='/destination/:id' element={<Destination/>}/>
+            <Route path="/editdestination/:id" element={<EditDestination/>}/>
+            
         </Routes>
     </BrowserRouter>
   );

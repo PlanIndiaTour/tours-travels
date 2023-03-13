@@ -33,7 +33,8 @@ const Thead = styled(TableRow)`
 `;
 
 const TRow = styled(TableRow)`
-  background: #c6deff;
+  background: #c6deff; wordWrap: 'break-word',
+  maxWidth: 1000,
   & > td {
     font-size: 20px;
   }

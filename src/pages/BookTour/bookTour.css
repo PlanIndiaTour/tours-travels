@@ -1,0 +1,32 @@
+.Booking-page {
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.Booking-form {
+  width: 40%;
+  box-shadow: 0 0 20px #00000012;
+  padding: 40px;
+  background-color: white;
+}
+
+.Booking-text input {
+  color: black;
+  font-size: 18px;
+  border-radius: 0;
+  line-height: 18px;
+  background-color: #dbdbdb;
+  padding: 10px 10px 10px 40px;
+  margin-bottom: 15px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 2px solid rgba(0, 0, 0, 0);
+}
+
+.Book-button {
+  font-size: 30px;
+}

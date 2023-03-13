@@ -25,18 +25,23 @@ const Tourlist = () => {
         <div className="tourlist">
           {tours.map((tour) => (
             <div key={tour} className="TourlistComponent">
-              <div className="tourlistimg">img</div>
+              <div className="tourlistimg"></div>
               <div className="tourlistdisc">
                 <div className="tourlisttitle">{tour.title}</div>
                 <div className="tourlistdescription">{tour.description}</div>
               </div>
               <div className="tourlistbook">
-                <div className="tourlistprice">₹ {tour.price}/-</div>
-                <div className="tourlistdays">Tour Duration - {tour.days}</div>
-
-                <Link to={`/tour/${tour.id}`} className="tourlistviewmore">
-                  ViewMore
-                </Link>
+                <div className="tourlistprice">
+                  <p>Starts From</p> ₹ {tour.price}/-
+                  <p>Per Person</p>
+                  Travel {tour.days}
+                </div>
+                <div className="tourlistdays"></div>
+                <div className="viewsingletour">
+                  <Link to={`/tour/${tour.id}`} className="tourlistviewmore">
+                    View Details
+                  </Link>
+                </div>
               </div>
             </div>
           ))}

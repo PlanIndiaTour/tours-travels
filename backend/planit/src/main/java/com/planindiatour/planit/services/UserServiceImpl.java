@@ -78,8 +78,8 @@ public class UserServiceImpl implements UserService {
             String password = loginDTO.getPassword();
             String encodedPassword = employee1.getPassword();
             Boolean isPwdRight = passwordEncoder.matches(password, encodedPassword);
-//            if (isPwdRight)
-            if(encodedPassword!=null)
+            if (isPwdRight)
+//            if(encodedPassword!=null)
             {
             	
                 Optional<User> employee = userDao.findOneByEmailAndPassword(loginDTO.getEmail(), encodedPassword);
