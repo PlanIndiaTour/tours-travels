@@ -1,19 +1,20 @@
 import React from "react";
 import { Toolbar, AppBar, styled } from "@mui/material";
 import { NavLink } from "react-router-dom";
+import { color } from "@mui/system";
 
 const Header = styled(AppBar)`
-background:#111111;
-margin-bottom:50px;
-width: '100%';
-`
+  background: #111111;
+  margin-bottom: 50px;
+  width: "100%";
+`;
 
-const Tabs =styled(NavLink)`
-font-size:30px;
-margin-right:80px;
-color:inherit;
-text-decoration:none;
-`
+const Tabs = styled(NavLink)`
+  font-size: 30px;
+  margin-right: 80px;
+  color: inherit;
+  text-decoration: none;
+`;
 
 const AdNavbar = () => {
     return ( 

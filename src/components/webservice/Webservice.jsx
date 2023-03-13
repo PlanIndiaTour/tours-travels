@@ -5,13 +5,10 @@ import "./webservice.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBowlFood,
-  faBurger,
-  faHamburger,
   faHotel,
   faMountainSun,
   faPlaneDeparture,
 } from "@fortawesome/free-solid-svg-icons";
-import { faFolderOpen } from "@fortawesome/free-regular-svg-icons";
 
 const webservice = () => {
   return (

@@ -66,8 +66,6 @@ const Login = () => {
         //---------------------------------------------------------------
   return (
     <>
-           
-      
       <div className="loginContainer">
         <div className="loginHeading">
           <h1>Login To PlanIT</h1>
@@ -115,30 +113,26 @@ const Login = () => {
           </form> 
         </div>
         <div className="account">
-          {/* <div className="forgotpassword">
+          <div className="forgotpassword">
             <Link to="/" className="fp">
               forgot password?
             </Link>
-          </div> */}
+          </div>
           <div className="donthave">
             <p>
               Don't have a account?{" "}
-              <Link to="/" className="su" onClick={toggleSignup}>
+              <Link
+                to="/"
+                className="su"
+                // onClick={toggleSignup()}
+                // onChange={toggleLogin()}
+              >
                 Sign Up
               </Link>
             </p>
           </div>
         </div>
       </div>
-
-      {signup && (
-        <div className="signin">
-          <div className="overlay" onClick={toggleSignup}></div>
-          <Signup />
-        </div>
-      )}
-      
-      
     </>
   );
 };

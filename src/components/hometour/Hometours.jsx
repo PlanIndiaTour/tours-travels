@@ -4,30 +4,15 @@ import "./hometours.css";
 
 import { Link } from "react-router-dom";
 
-import ImageSlider from "./ImageSlider";
+import Carousel from "../carousel/Carousel";
+import { carouselData } from "../carousel/carouselData";
 
 const Hometours = () => {
-  const slides = [
-    { url: "http://localhost:3000/image.jpg", title: "goldentriangle" },
-    { url: "http://localhost:3000/image.jpg", title: "goldentriangle" },
-    { url: "http://localhost:3000/image.jpg", title: "goldentriangle" },
-    { url: "http://localhost:3000/image.jpg", title: "goldentriangle" },
-    { url: "http://localhost:3000/image.jpg", title: "goldentriangle" },
-  ];
-
-  const containerStyles = {
-    width: "500px",
-    height: "280px",
-    margin: "0 auto",
-  };
-
   return (
     <>
       <div className="hometours">
-        <div className="treandingtourcontainer">
-          <div className="treandingtourSlider" style={containerStyles}>
-            <ImageSlider slides={slides} />
-          </div>
+        <div className="trendingtourcontainer">
+          <Carousel slides={carouselData} />
         </div>
         <div className="trendingtours">
           TRENDING TOURS

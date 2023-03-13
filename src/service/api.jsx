@@ -31,9 +31,6 @@ export const signup = async (user) => {
     }
 }
 
-
-
-
 export const deleteUser = async (id,user) => {
     try {
         return await axios.delete(`${API_URL}/user/${id}` );
@@ -41,7 +38,6 @@ export const deleteUser = async (id,user) => {
         console.log('Error while deleting user in api', error.message);
     }
 }
-
 
 export const editUser = async (id, user) => {
     try {

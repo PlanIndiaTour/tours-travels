@@ -1,14 +1,14 @@
- import React from "react";
+import React from "react";
 import "./footer.css";
 import img from "../../assets/PlanIT_logo.png";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 
 // import { Library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faFacebookF,
+  // faFacebookF,
   faInstagram,
   faPinterest,
   faTwitter,
@@ -22,13 +22,22 @@ const Footer = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_ruqz38i', 'template_mlulbrq', contactEmail.current, 'a9M9n9mtTW2WH3iQ-')
-      .then((result) => {
+    emailjs
+      .sendForm(
+        "service_ruqz38i",
+        "template_mlulbrq",
+        contactEmail.current,
+        "a9M9n9mtTW2WH3iQ-"
+      )
+      .then(
+        (result) => {
           console.log(result.text);
-      }, (error) => {
+        },
+        (error) => {
           console.log(error.text);
-      });
-      e.target.reset()
+        }
+      );
+    e.target.reset();
   };
 
   return (
@@ -40,8 +49,8 @@ const Footer = () => {
             context in life?
           </p>
           <div className="inputArea">
-            <form ref={contactEmail} onSubmit={sendEmail}  >
-            {/* action="subscribe" */}
+            <form ref={contactEmail} onSubmit={sendEmail}>
+              {/* action="subscribe" */}
               <input
                 type="email"
                 name="email"
@@ -51,8 +60,6 @@ const Footer = () => {
               <button className="footerBtn">Subscribe</button>
             </form>
           </div>
-          
-          
         </section>
 
         <div className="footerLinks">
@@ -95,14 +102,14 @@ const Footer = () => {
           <section className="socialMedia">
             <div className="socialMediaWrap">
               <div className="socialIcons">
-                <Link
+                {/* <Link
                   to="/"
                   class="socialIconLink facebook"
                   target="_blank"
                   aria-label="Facebook"
                 >
                   <FontAwesomeIcon icon={faFacebookF} />
-                </Link>
+                </Link> */}
                 <Link
                   to="https://instagram.com/plan_india_tour?igshid=YmMyMTA2M2Y="
                   class="socialIconLink instagram"
@@ -137,7 +144,7 @@ const Footer = () => {
                 </Link>
               </div>
               <div className="footerLogo">
-                <Link to="/" className="socialLogo">
+                <Link to="/Dashboard" className="socialLogo">
                   <img src={img} alt="PlanIT_logo" id="footerlogo" />
                 </Link>
               </div>
