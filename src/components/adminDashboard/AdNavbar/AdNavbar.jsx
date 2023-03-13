@@ -21,9 +21,10 @@ const AdNavbar = () => {
             <Toolbar>
                 <Tabs to="/Dashboard">Admin Dashboard</Tabs>
                 <Tabs to="/allUser">All User</Tabs>
-                <Tabs to="/destinations">Destinations</Tabs>
                 <Tabs to="/bookings">Bookings</Tabs>
                 <Tabs to="/feedback">Feedback</Tabs>
+                <Tabs to="/allDestinations">All Destinations</Tabs>
+                <Tabs to="/allTours">Tours</Tabs>
             </Toolbar>
         </Header>
      );

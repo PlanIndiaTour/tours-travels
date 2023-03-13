@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API_URL = 'http://localhost:8080';
-
+export default API_URL;
 
 export const getUser = async (id) => {
     id = id || '';
@@ -59,3 +59,83 @@ export const editUser = async (id, user) => {
 //     }
 // }
 
+
+//--------------------------------------DESTINATIONS---------------------------------------
+
+export const getDestis = async (data) => {
+    try {
+      return await axios.get(`${API_URL}/destinations`, data);
+    } catch (error) {
+      console.log("Error in view Destinations", error.message);
+    }
+  }
+
+  export const addDestination = async (desti) => {
+    try {
+      return await axios.post(`${API_URL}/destination`, desti);
+    } catch (error) {
+      console.log("Error in adding Destinations", error.message);
+    }
+  }
+  
+  export const deleteDesti = async (id, desti) => {
+    try {
+      return await axios.delete(`${API_URL}/destination/${id}`);
+    } catch (error) {
+      console.log("Error while deleting Destination in api", error.message);
+    }
+  }
+
+  export const getDestination = async (id) => {
+    id = id || '';
+    try {
+        return await axios.get(`${API_URL}/destinations/${id}`);
+    } catch (error) {
+        console.log('Error in view destination api', error.message);
+    }
+}
+
+//--------------------------------------TOURS---------------------------------------
+
+export const getTours = async (data) => {
+    try {
+      return await axios.get(`${API_URL}/tours`, data);
+    } catch (error) {
+      console.log("Error in view Tours", error.message);
+    }
+  }
+
+
+
+  export const addTour = async (tour) => {
+    try {
+      return await axios.post(`${API_URL}/tour`, tour);
+    } catch (error) {
+      console.log("Error in adding tours", error.message);
+    }
+  }
+  
+  export const deleteTour = async (id, tour) => {
+    try {
+      return await axios.delete(`${API_URL}/tour/${id}`);
+    } catch (error) {
+      console.log("Error while deleting Destination in api", error.message);
+    }
+  }
+
+  export const getTour = async (id) => {
+    id = id || '';
+    try {
+        return await axios.get(`${API_URL}/tours/${id}`);
+    } catch (error) {
+        console.log('Error in view tour api', error.message);
+    }
+}
+// export const getUser = async (id) => {
+//   id = id || '';
+//   try {
+//       return await axios.get(`${API_URL}/users/${id}`);
+//   } catch (error) {
+//       console.log('Error in view user api', error.message);
+//   }
+// }

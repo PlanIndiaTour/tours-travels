@@ -3,12 +3,9 @@ import React, { useState } from "react";
 import "./navbar.css";
 
 import img from "../../assets/PlanIT_logo.png";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
-
 import { Link } from "react-router-dom";
-
 import Login from "../loginSignup/Login";
 import Signup from "../loginSignup/Signup";
 
@@ -37,10 +34,10 @@ const Navbar = () => {
 
           <div className="navItems">
             <span>
-              <Link to="/tour">TOUR</Link>
+              <Link to="/tourlist">TOUR</Link>
             </span>
             <span>
-              <Link to="/Destination">DESTINATION</Link>
+              <Link to="/destinationlist">DESTINATION</Link>
             </span>
             <span>
               <Link to="/Dashboard">ADMIN</Link>
