@@ -3,7 +3,7 @@ import "./destinationlist.css";
 import { Link } from "react-router-dom";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
-import { getDestis } from "../../service/api";
+import { getDestination } from "../../service/api";
 
 
 const Destinationlist = () => {
@@ -14,7 +14,7 @@ const Destinationlist = () => {
   }, []);
 
   const getDestinationDetails = async () => {
-    let response = await getDestis();
+    let response = await getDestination();
     setDestinations(response.data);
   };
  

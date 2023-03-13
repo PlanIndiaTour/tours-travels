@@ -95,10 +95,6 @@ const AddTour = ({ toggleAddDestination }) => {
           </form>
         </div>
       </div>
-    </form>
-  </div>
-  </div>
-  
       </>
     );
   };

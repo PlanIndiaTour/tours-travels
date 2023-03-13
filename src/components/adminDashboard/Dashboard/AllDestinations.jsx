@@ -11,7 +11,7 @@ import {
 import React from "react";
 import { Link } from "react-router-dom";
 import AdNavbar from "../AdNavbar/AdNavbar";
-import { getDestis, deleteDesti } from "../../../service/api";
+import { getDestination, deleteDesti } from "../../../service/api";
 import { Box } from "@mui/system";
 // import AddTour from "./AddTour";
 import AddDestination from "./AddDestination";
@@ -48,7 +48,7 @@ const AllDestinations = () => {
   }, []);
 
   const getDestiDetails = async () => {
-    let response = await getDestis();
+    let response = await getDestination();
     // console.log(response);
     setDestis(response.data);
     // toast.success("All Tours are loaded");
@@ -114,7 +114,5 @@ const AllDestinations = () => {
     </div>
   );
 };
-
-export default AllDestinations;
 
 export default AllDestinations;

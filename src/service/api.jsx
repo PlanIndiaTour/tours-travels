@@ -48,7 +48,7 @@ export const editUser = async (id, user) => {
 
 //--------------------------------------DESTINATIONS---------------------------------------
 
-export const getDestis = async (data) => {
+export const getDestination = async (data) => {
   try {
     return await axios.get(`${API_URL}/destinations`, data);
   } catch (error) {
@@ -105,15 +105,16 @@ export const getTour = async (id) => {
   } catch (error) {
     console.log("Error in view tour api", error.message);
   }
-
-  export const getTour = async (id) => {
-    id = id || '';
-    try {
-        return await axios.get(`${API_URL}/tours/${id}`);
-    } catch (error) {
-        console.log('Error in view tour api', error.message);
-    }
 }
+
+//   export const getTour = async (id) => {
+//     id = id || '';
+//     try {
+//         return await axios.get(`${API_URL}/tours/${id}`);
+//     } catch (error) {
+//         console.log('Error in view tour api', error.message);
+//     }
+// }
 // export const getUser = async (id) => {
 //   id = id || '';
 //   try {
