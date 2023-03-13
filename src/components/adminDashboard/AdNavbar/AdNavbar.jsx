@@ -1,7 +1,6 @@
 import React from "react";
 import { Toolbar, AppBar, styled } from "@mui/material";
 import { NavLink } from "react-router-dom";
-import { color } from "@mui/system";
 
 const Header = styled(AppBar)`
   background: #111111;
@@ -10,25 +9,26 @@ const Header = styled(AppBar)`
 `;
 
 const Tabs = styled(NavLink)`
-  font-size: 30px;
+  font-size: 28px;
   margin-right: 80px;
   color: inherit;
   text-decoration: none;
 `;
 
 const AdNavbar = () => {
-    return ( 
-        <Header position="static" >
-            <Toolbar>
-                <Tabs to="/Dashboard">Admin Dashboard</Tabs>
-                <Tabs to="/allUser">All User</Tabs>
-                <Tabs to="/bookings">Bookings</Tabs>
-                <Tabs to="/feedback">Feedback</Tabs>
-                <Tabs to="/allDestinations">All Destinations</Tabs>
-                <Tabs to="/allTours">Tours</Tabs>
-            </Toolbar>
-        </Header>
-     );
-}
- 
+  return (
+    <Header position="static">
+      <Toolbar>
+        <Tabs to="/Dashboard">Admin Dashboard</Tabs>
+        <Tabs to="/allUser">Users</Tabs>
+        <Tabs to="/alldestinations">Destinations</Tabs>
+        <Tabs to="/alltours">Tours</Tabs>
+        <Tabs to="/bookings">Bookings</Tabs>
+        <Tabs to="/feedback">Feedbacks</Tabs>
+        <Tabs to="/">PlanIT</Tabs>
+      </Toolbar>
+    </Header>
+  );
+};
+
 export default AdNavbar;

@@ -19,8 +19,8 @@ import AddTour from "./AddTour";
 // import { ToastContainer, toast } from "react-toastify";
 
 const StyledTable = styled(Table)`
-  width: 80%;
-  margin: 90px auto 0 auto;
+  width: 95%;
+  margin: 40px auto 40px auto;
 `;
 const Thead = styled(TableRow)`
   background: #520f54;
@@ -28,6 +28,7 @@ const Thead = styled(TableRow)`
   & > th {
     color: #fff;
     font-size: 20px;
+    // max-width: 20px;
   }
 `;
 
@@ -61,13 +62,7 @@ const AllTours = () => {
   return (
     <div>
       <AdNavbar />
-      <Box
-        margin="50px"
-        padding="50px"
-        paddingTop="0px"
-        border="1px solid black"
-      >
-
+      <Box margin="50px" border="1px solid black">
         <StyledTable>
           <TableHead>
             <Thead>
@@ -92,11 +87,11 @@ const AllTours = () => {
                 <TableCell>{tour.days}</TableCell>
 
                 <Button
-                component={Link}
-                to={`/edittour/${tour.id}`}
-                variant="contained"
-                style={{ marginTop: 12, marginRight: 15 }}
-                className="edittour"
+                  component={Link}
+                  to={`/edittour/${tour.id}`}
+                  variant="contained"
+                  style={{ marginTop: 12, marginRight: 15 }}
+                  className="edittour"
                 >
                   Edit Tour
                 </Button>
@@ -122,5 +117,7 @@ const AllTours = () => {
     </div>
   );
 };
+
+export default AllTours;
 
 export default AllTours;

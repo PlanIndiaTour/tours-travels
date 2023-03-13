@@ -13,17 +13,32 @@ import Homereview from "../../components/homereview/Homereview";
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Navbar />
-      <Header />
-      <Homedestinations />
-      <Homeplaces />
-      <Hometours />
-      <Homereview />
-      <Webservice />
-      {/* <div className="empty"></div> */}
-      <Footer />
-    </div>
+      <div className="homecontainer">
+        <section>
+          <Header />
+        </section>
+        <section>
+          <Homedestinations />
+        </section>
+        <section>
+          <Homeplaces />
+        </section>
+        <section>
+          <Hometours />
+        </section>
+        <section>
+          <Homereview />
+        </section>
+        <section>
+          <Webservice />
+        </section>
+        <section>
+          <Footer />
+        </section>
+      </div>
+    </>
   );
 };
 

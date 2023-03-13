@@ -19,8 +19,8 @@ import AddDestination from "./AddDestination";
 // import { ToastContainer, toast } from "react-toastify";
 
 const StyledTable = styled(Table)`
-  width: 80%;
-  margin: 90px auto 0 auto;
+  width: 95%;
+  margin: 40px auto 40px auto;
 `;
 const Thead = styled(TableRow)`
   background: #520f54;
@@ -33,6 +33,7 @@ const Thead = styled(TableRow)`
 
 const TRow = styled(TableRow)`
   background: #c6deff;
+
   & > td {
     font-size: 20px;
   }
@@ -61,12 +62,7 @@ const AllDestinations = () => {
   return (
     <div>
       <AdNavbar />
-      <Box
-        margin="50px"
-        padding="50px"
-        paddingTop="0px"
-        border="1px solid black"
-      >
+      <Box margin="50px" border="1px solid black">
         <StyledTable>
           <TableHead>
             <Thead>
@@ -74,7 +70,8 @@ const AllDestinations = () => {
               <TableCell>Title</TableCell>
               <TableCell>Description</TableCell>
               <TableCell>City</TableCell>
-              <TableCell>City Description</TableCell>
+              <TableCell>CityDescription</TableCell>
+
               <TableCell></TableCell>
             </Thead>
           </TableHead>
@@ -88,11 +85,11 @@ const AllDestinations = () => {
                 <TableCell>{desti.city}</TableCell>
                 <TableCell>{desti.citydescription}</TableCell>
                 <Button
-                component={Link}
-                to={`/editdestination/${desti.id}`}
-                variant="contained"
-                style={{ marginTop: 12, marginRight: 15 }}
-                className="editdestination"
+                  component={Link}
+                  to={`/editdestination/${desti.id}`}
+                  variant="contained"
+                  style={{ marginTop: 12, marginRight: 15 }}
+                  className="editdestination"
                 >
                   Edit Destination
                 </Button>
@@ -117,5 +114,7 @@ const AllDestinations = () => {
     </div>
   );
 };
+
+export default AllDestinations;
 
 export default AllDestinations;

@@ -8,15 +8,15 @@ import Profile from './pages/profile/Profile'
 // import ViewPlace from './pages/place/ViewPlace';
 import Dashboard from './components/adminDashboard/Dashboard/Dashboard';
 import AllUser from './components/adminDashboard/Dashboard/AllUser';
-// import Destinations from './components/adminDashboard/Dashboard/Destination/Destinations';
 import Feedback from './components/adminDashboard/Dashboard/Feedback';
 import Bookings from './components/adminDashboard/Dashboard/Bookings';
 import EditProfile from './pages/profile/EditProfile';
-import AddDestination from './components/adminDashboard/Dashboard/AddDestination';
-import AllDestinations from './components/adminDashboard/Dashboard/AllDestinations';
 import AllTours from './components/adminDashboard/Dashboard/AllTours';
-import AddTour from './components/adminDashboard/Dashboard/AddTour';
+import Tour from './pages/tourlist/Tour';
 import Tourlist from './pages/tourlist/Tourlist';
+import Aboutus from './pages/aboutus/Aboutus';
+import AllDestinations from './components/adminDashboard/Dashboard/AllDestinations';
+import ReviewList from './pages/Reviewslist/ReviewList';
 import Tour from './pages/tourlist/Tour';
 import Destination from './pages/destinationlist/Destination';
 import Destinationlist from './pages/destinationlist/Destinationlist';
@@ -30,13 +30,19 @@ function App() {
             <Route path='/profile' element={<Profile/>}/>
             {/* <Route path='/place' element={<Place/>}/> */}
             {/* <Route path='/viewPlace' element={<ViewPlace/>}/> */}
-            <Route path='/tour' element={<Tour/>}/>
+            <Route path='/tour/:id' element={<Tour/>}/>
             <Route path='/tourlist' element={<Tourlist/>}/>
+            <Route path='/aboutus' element={<Aboutus/>}/>
+            <Route path='/reviews' element={<ReviewList/>}/>
+
+
 
 
             <Route path='/Dashboard' element={<Dashboard/>}/>
             <Route path='/allUser' element={<AllUser/>}/>
             {/* <Route path='/destinations' element={<Destinations/>}/> */}
+            <Route path='/alldestinations' element={<AllDestinations/>}/>
+            <Route path='/alltours' element={<AllTours/>}/>
             <Route path='/feedback' element={<Feedback/>}/>
             <Route path='/bookings' element={<Bookings/>}/>
             <Route path='/profile/:id' element={<Profile/>}/>
