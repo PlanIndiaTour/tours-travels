@@ -23,7 +23,7 @@ const Home = () => {
       <Webservice />
       {/* <div className="empty"></div> */}
       <Footer />
-    </>
+    </div>
   );
 };
 
