@@ -39,9 +39,9 @@ const Navbar = () => {
             <span>
               <Link to="/destinationlist">DESTINATION</Link>
             </span>
-            <span>
+            {/* <span>
               <Link to="/Dashboard">ADMIN</Link>
-            </span>
+            </span> */}
             <span>
               <Link to="/Aboutus">ABOUT US</Link>
             </span>
@@ -50,7 +50,7 @@ const Navbar = () => {
           <div className="Profile">
             <span>
               <div className="navProfile">
-                <Link to="/profile">
+                <Link to="/">
                   <FontAwesomeIcon icon={faUser} />
                 </Link>
               </div>

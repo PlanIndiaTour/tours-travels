@@ -40,15 +40,15 @@ const Details = async () => {
 
 
 
-// const [tours, setTours] = useState([]);
+// const [Destis, setDestis] = useState([]);
     // useEffect(() =>{
-    //     getTourDetails( );
+    //     getDestiDetails( );
     // }, [])
 
-    // const getTourDetails = async () =>{
-    //     let response = await getTours();
+    // const getDestiDetails = async () =>{
+    //     let response = await getDestis();
     //     console.log(response);
-    //     setTours(response.data);
+    //     setDestis(response.data);
     // }
 
 
@@ -57,24 +57,24 @@ const Details = async () => {
       <div>
         <Navbar />
           
-        <div className="TourPage">
-            <div className="TourLayout" key={destination.id}>
-              <div className="TourHead">
-                <div className="TourImg">
-                  <img src={img} className="TourImg"></img>
+        <div className="DestiPage">
+            <div className="DestiLayout" key={destination.id}>
+              <div className="DestiHead">
+                <div className="DestiImg">
+                  {/* <img src={img} className="DestiImg"></img> */}
                 </div>
-                <div className="TourTitle">{destination.title}</div>
+                <div className="DestiTitle">{destination.title}</div>
               </div>
-              <div className="TourBody">
+              <div className="DestiBody">
                 <div className="itiday">DESCRIPTION</div>
-                <div className="TourDiscription">{destination.description}</div>
+                <div className="DestiDiscription">{destination.description}</div>
                 <div className="itiday">CITY</div>
-                <div className="TourItinerary">{destination.city}</div>
+                <div className="DestiItinerary">{destination.city}</div>
                 <div className="itiday">CITY DESCRIPTION</div>
-                <div className="TourDays">{destination.citydescription}</div>
+                <div className="DestiDays">{destination.citydescription}</div>
 
-                <Link to="book" className="TourBook">
-                  Book
+                <Link to="/tourlist" className="DestiBook">
+                  View Tour
                 </Link>
             </div>
           </div>

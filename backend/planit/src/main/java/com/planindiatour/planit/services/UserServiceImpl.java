@@ -66,7 +66,6 @@ public class UserServiceImpl implements UserService {
 //		User user = userDao.getOne(parseLong);
 		userDao.delete(user);
 		return null;
-
 	}
 
 	@Override

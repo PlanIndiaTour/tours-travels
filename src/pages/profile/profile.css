@@ -48,6 +48,11 @@
     padding-bottom: 25px;
 }
 
+.editprofilec{
+    display: flex;
+    gap: 20px;
+}
+
 .editprofile{
     text-decoration: none;
     color: #d6cdea;
@@ -55,6 +60,7 @@
     padding: 5px 10px;
     border: 1px solid purple;
     border-radius: 10px;
+    gap: 20px;
 }
 
 .otherprofiledetails{

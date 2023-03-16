@@ -23,15 +23,15 @@ const ReviewList = () => {
       <div>
         <Navbar />
         <ReviewForm />
-        <div className="tourlistPageTitle"> Reviews From Customers</div>
-        <div className="tourlist">
+        <div className="ReviewlistPageTitle"> Reviews From Customers</div>
+        <div className="Reviewlist">
           {reviews.map((review) => (
-            <div key={review} className="TourlistComponent">
+            <div key={review} className="ReviewlistComponent">
               
-              <div className="tourlistdisc">
-                <div className="tourlisttitle">Name - {review.name}</div>
-                <div className="tourlistdays">Date - {review.date}</div>
-                <div className="tourlistdescription">{review.reviewtext}</div>
+              <div className="Reviewlistdisc">
+                <div className="Reviewlisttitle">{review.name}</div>
+                <div className="Reviewlistdays">{review.date}</div>
+                <div className="Reviewlistdescription">{review.reviewtext}</div>
               </div>
               </div>
           ))}

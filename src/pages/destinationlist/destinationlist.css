@@ -2,44 +2,46 @@
   text-align: center;
   font-size: 35px;
   font-weight: 700;
-  background-color: #f5f5f5;
+  background-color: #f2f1ef;
   padding-top: 25px;
 }
 
 .destilist {
   display: flex;
   flex-direction: column;
-  background-color: #f5f5f5;
+  justify-content: center;
+  background-color: #f2f1ef;
   align-items: center;
   padding: 20px 0px;
+  /* border: 1px solid black; */
 }
 
 .destilistComponent {
   width: 70vw;
-  min-height: 40vh;
+  min-height: 50vh;
   /* border: 1px solid black; */
-  border-radius: 20px;
+  /* border-radius: 20px; */
   display: flex;
   /* justify-content: center; */
   /* padding: 20px; */
   margin: 20px;
-  background-color: white;
+  background-color: #d8d0d0;
   box-shadow: 0 0 40px #00000012;
 }
 
 .destilistimg {
-  width: 28%;
+  width: 40%;
   /* height: 100%; */
   /* border: 1px solid black; */
-  border-radius: 10px;
+  /* border-radius: 10px; */
   position: relative;
   margin: 20px;
-  background: url(./../../assets/DabhosaWaterfall_jawhar.jpg);
+  background: url(./../../assets/shillong.jpg);
   background-size: cover;
 }
 
 .destilistdisc {
-  width: 44%;
+  width: 52%;
   /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
@@ -49,7 +51,7 @@
 }
 
 .destilisttitle {
-  height: 25%;
+  height: 15%;
   font-size: 30px;
   font-weight: 600;
   /* border: 1px solid black; */
@@ -106,13 +108,15 @@
 }
 
 .destilistviewmore {
-  width: 50%;
-  color: #f5f8ff;
+  width: 40%;
+  color: #d8d0d0;
   text-align: center;
   text-decoration: none;
   font-size: 20px;
   padding: 7px 0px;
-  border: 1px solid #ffd800;
-  background-color: #ffd800;
-  border-radius: 5px;
+  border: 1px solid #413f3d;
+  background-color: #413f3d;
+  /* border-radius: 5px; */
+  margin-top: 20px;
+  margin-bottom: 20px;
 }

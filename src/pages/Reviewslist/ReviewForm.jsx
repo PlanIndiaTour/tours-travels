@@ -10,7 +10,7 @@ const initialValues = {
   reviewtext: ""
 };
 
-const ReviewForm = ({ toggleAddDestination }) => {
+const ReviewForm = () => {
   const [review, setReview] = useState(initialValues);
   const { name, date, reviewtext} = review;
 
@@ -23,7 +23,7 @@ const ReviewForm = ({ toggleAddDestination }) => {
     e.preventDefault();
     //---------------------------------------------kartik
     await addReview(review);
-    toggleAddDestination();
+    window.location.reload(false);
   };
 
   return (
@@ -67,7 +67,7 @@ const ReviewForm = ({ toggleAddDestination }) => {
             </p>
 
             <div className="submit">
-              <input type="submit" value="ADD DATA" id="button-blue" />
+              <input type="submit" value="ADD REVIEW" id="button-blue" />
               <div className="ease"></div>
             </div>
           </form>

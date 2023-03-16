@@ -1,92 +1,62 @@
-.tourlistPageTitle {
+.ReviewlistPageTitle {
     text-align: center;
     font-size: 35px;
     font-weight: 750;
-    background-color: #fffee0;
+    background-color: Review;
     padding-top: 25px;
   }
   
-  .tourlist {
+  .Reviewlist {
     display: flex;
     flex-direction: column;
-    background-color: #fffee0;
+    background-color: white;
     align-items: center;
     padding: 20px 0px;
   }
   
-  .TourlistComponent {
+  .ReviewlistComponent {
     width: 70vw;
     min-height: 40vh;
-    /* border: 1px solid black; */
+    border: 1px solid black;
     border-radius: 10px;
     display: flex;
     /* justify-content: center; */
     /* padding: 20px; */
     margin: 20px;
     background-color: white;
+    padding-left: 30px;
   }
   
-  .tourlistimg {
-    width: 30%;
-    /* height: 100%; */
-    /* border: 1px solid black; */
-    border-radius: 10px;
-    position: relative;
-    margin: 20px;
-    background-color: bisque;
-  }
-  
-  .tourlistdisc {
+  .Reviewlistdisc {
     width: 45%;
     /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
-    align-items: center;
+    /* align-items: center; */
     padding: 5px;
   }
   
-  .tourlisttitle {
-    height: 25%;
+  .Reviewlisttitle {
+    height: 15%;
     font-size: 30px;
     font-weight: 700;
     /* border: 1px solid black; */
-    padding-top: 5px;
+    padding-top: 10px;
   }
   
-  .tourlistdescription {
+  .Reviewlistdays {
+    height: 15%;
+    /* display: flex; */
+    /* align-items: center; */
+    font-size: 18px;
+    color: gray;
+    /* border: 1px solid black; */
+  }
+  
+  .Reviewlistdescription {
+    width: 63vw;
     font-size: 20px;
+    font-weight: 400;
+    /* border: 1px solid black; */
   }
-  
-  .tourlistbook {
-    width: 25%;
-    /* display: flex;
-    flex-direction: column; */
-    /* align-items: right; */
-    /* border: 1px solid #d0dfff; */
-    background-color: #f5f8ff;
-    padding: 5px;
-    text-align: right;
-  }
-  .tourlistprice {
-    height: 30%;
-    text-align: right;
-  
-    display: flex;
-    right: 0;
-    align-items: right;
-    font-size: 20px;
-  }
-  .tourlistdays {
-    height: 30%;
-    display: flex;
-    align-items: center;
-    font-size: 20px;
-  }
-  .tourlistviewmore {
-    height: 40%;
-    display: flex;
-    align-items: center;
-    border: 1px solid purple;
-  }
-  

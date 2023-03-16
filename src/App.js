@@ -15,7 +15,6 @@ import Dashboard from './components/adminDashboard/Dashboard/Dashboard';
 import AllUser from './components/adminDashboard/Dashboard/AllUser';
 
 import Bookings from './components/adminDashboard/Dashboard/Bookings';
-// import Profile from './pages/profile/Profile';
 import EditProfile from './pages/profile/EditProfile';
 import AddDestination from './components/adminDashboard/Dashboard/AddDestination';
 import AllDestinations from './components/adminDashboard/Dashboard/AllDestinations';

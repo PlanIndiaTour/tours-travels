@@ -44,9 +44,13 @@ const Profile = () => {
               <div className="pcphone">{user.contact}</div>
             </div>
           </div>
-          <div className="editprofile">
+          <div className="editprofilec">
             <Link to={`/editprofile/${user.id}`} className="editprofile">
               Edit Profile
+            </Link>
+
+            <Link to={`/`} className="editprofile">
+              Logout
             </Link>
             {/* ))} */}
           </div>

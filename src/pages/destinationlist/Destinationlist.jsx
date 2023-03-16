@@ -21,7 +21,7 @@ const Destinationlist = () => {
     <>
       <div>
         <Navbar />
-        <div className="tourlistPageTitle">Explore Destinations</div>
+        <div className="destilistPageTitle">Explore Destinations</div>
         <div className="destilist">
           {destinations.map((destination) => (
             <div key={destination} className="destilistComponent">
@@ -31,13 +31,6 @@ const Destinationlist = () => {
                 <div className="destilistdescription">
                   {destination.description}
                 </div>
-              </div>
-              <div className="destilistbook">
-                {/* <div className="destilistprice">{destination.city}</div>
-                <div className="destilistdays">
-                  {destination.citydescription}
-                </div> */}
-
                 <Link
                   to={`/destination/${destination.id}`}
                   className="destilistviewmore"
@@ -45,6 +38,15 @@ const Destinationlist = () => {
                   Know more
                 </Link>
               </div>
+
+              {/* <div className="destilistbook"> */}
+                {/* <div className="destilistprice">{destination.city}</div>
+                <div className="destilistdays">
+                  {destination.citydescription}
+                </div> */}
+
+               
+              {/* </div> */}
             </div>
           ))}
         </div>

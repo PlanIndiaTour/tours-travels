@@ -67,9 +67,9 @@ const Footer = () => {
             <div className="footerLinkItems">
               <h2>Usefull Links</h2>
               <Link to="/Aboutus">About Us</Link>
-              <Link to="/">Reviews</Link>
+              <Link to="/reviews">Reviews</Link>
               <Link to="/">Help</Link>
-              <Link to="/">Support</Link>
+              <Link to="/Dashboard">Admin</Link>
             </div>
           </div>
           <div className="footerLinkWrapper">

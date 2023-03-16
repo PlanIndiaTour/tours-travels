@@ -114,7 +114,7 @@ const BookTour = () => {
             </p>
 
             <div className="Book-submit">
-              <input type="submit" value="BOOK NOW" Book-button />
+              <input type="submit" value="BOOK NOW" className="Book-button" />
             </div>
           </form>
         </div>

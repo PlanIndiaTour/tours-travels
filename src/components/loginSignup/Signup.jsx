@@ -3,40 +3,64 @@ import { useState } from "react";
 import "./signup.css";
 import { signup } from "../../service/api";
 import { Link } from "react-router-dom";
-// import { useNavigate } from "react-router-dom";
-
 
 const initialValues = {
-  fullname: '',
-  email: '',
-  contact: '',
-  username: '',
-  password: ''
+  fullname: "",
+  email: "",
+  contact: "",
+  username: "",
+  password: "",
+};
 
-}
-
-const Signup = ({toggleSignup}) => {
-  
-
+const Signup = ({ toggleSignup }) => {
   const [user, setUser] = useState(initialValues);
-  const {fullname, email, contact, username, password} = user;
-  // const navigate = useNavigate();
+  const { fullname, email, contact, username, password } = user;
+  const [errors, setErrors] = useState({}); //omkar
 
   const onValueChange = (e) => {
+    setUser({ ...user, [e.target.name]: e.target.value });
+  };
 
-    setUser({ ...user, [e.target.name]: e.target.value })
-    // console.log(user)
-  }
-
-  const AllUserDetails = async(e) => {
+  const AllUserDetails = async (e) => {
     e.preventDefault();
     //-----------------------------------------------------------------kartik
+    setErrors(Validation(user));
     await signup(user);
     toggleSignup();
-  }
-  
+    // toggleLogin();
+  };
 
+  const Validation = (user) => {
+    let error = {};
+    const email_pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const password_pattern = /^(?=.\d)(?=.[a-z])(?=.*[A-Z])[a-zA-Z0-9]+$/;
+    // const user_pattern = /^[a-zA-Z][a-zA-Z0-9-_]{4,}$/;
+    if (!user.fullname) {
+      error.fullname = "Fullname is required!";
+    }
+    if (!user.email) {
+      error.email = "Email is required!";
+    } else if (!email_pattern.test(user.email)) {
+      error.email = "This is not a valid email format!";
+    }
+    if (!user.contact) {
+      error.contact = "Contact is required!";
+    }
+    if (!user.username) {
+      error.username = "username is required!";
+    }
+    if (!user.password) {
+      error.password = "Password is required!";
+    } else if (!password_pattern.test(user.password)) {
+      error.password = "This is not a valid email format!";
+    } else if (user.password.length < 8) {
+      error.password = "Password must be more than 8 characters";
+    } else if (user.password.length > 12) {
+      error.password = "Password cannot exceed more than 12 characters";
+    }
 
+    return error;
+  };
 
   return (
     <>
@@ -50,8 +74,6 @@ const Signup = ({toggleSignup}) => {
             name="signupForm"
             className="signupForm"
             id="signupForm"
-            
-
           >
             <div className="suserdata">
               <div className="suserinput" id="name">
@@ -66,9 +88,9 @@ const Signup = ({toggleSignup}) => {
                   placeholder="Enter Full Name"
                   required
                 />
-                {/* <i className="fa-solid fa-circle-check"></i> */}
-                {/* <i className="fa-solid fa-circle-exclamation"></i> */}
-                <span className="formerror"></span>
+                {errors.fullname && (
+                  <span className="formerror">{errors.fullname}</span>
+                )}
               </div>
               <div className="suserinput" id="email">
                 <label htmlFor="email">Email Address</label>
@@ -82,9 +104,9 @@ const Signup = ({toggleSignup}) => {
                   placeholder="Enter Email Address"
                   required
                 />
-                {/* <i className="fa-solid fa-circle-check"></i> */}
-                {/* <i className="fa-solid fa-circle-exclamation"></i> */}
-                <span className="formerror"></span>
+                {errors.email && (
+                  <span className="formerror">{errors.email}</span>
+                )}
               </div>
               <div className="suserinput" id="number">
                 <label htmlFor="contact">Contact Number</label>
@@ -98,9 +120,9 @@ const Signup = ({toggleSignup}) => {
                   placeholder="Enter Contact Number"
                   required
                 />
-                {/* <i className="fa-solid fa-circle-check"></i> */}
-                {/* <i className="fa-solid fa-circle-exclamation"></i> */}
-                <span className="formerror"></span>
+                {errors.contact && (
+                  <span className="formerror">{errors.contact}</span>
+                )}
               </div>
               <div className="suserinput" id="user">
                 <label htmlFor="username">Username</label>
@@ -114,9 +136,9 @@ const Signup = ({toggleSignup}) => {
                   placeholder="Create Username"
                   required
                 />
-                {/* <i className="fa-solid fa-circle-check"></i> */}
-                {/* <i className="fa-solid fa-circle-exclamation"></i> */}
-                <span className="formerror"></span>
+                {errors.username && (
+                  <span className="formerror">{errors.username}</span>
+                )}
               </div>
               <div className="suserinput" id="password">
                 <label htmlFor="password">Password</label>
@@ -130,13 +152,13 @@ const Signup = ({toggleSignup}) => {
                   placeholder="Create Password"
                   required
                 />
-                {/* <i className="fa-solid fa-circle-check"></i> */}
-                {/* <i className="fa-solid fa-circle-exclamation"></i> */}
-                <span className="formerror"></span>
+                {errors.password && (
+                  <span className="formerror">{errors.password}</span>
+                )}
               </div>
             </div>
             <div className="ssubmit">
-              <input type="submit" value="Register"  />
+              <input type="submit" value="Register" />
             </div>
           </form>
         </div>

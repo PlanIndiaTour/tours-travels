@@ -5,13 +5,17 @@ import Signup from "../loginSignup/Signup";
 import axios from "axios";
 import Home from "../../pages/home/Home";
 
+import { getUsers } from "../../service/api";//omkartry
 
 
 
 
-const Login = ({toggleLogin}) => {
+
+
+const Login = (user) => {
   
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
+
   const [signup, setSignup] = useState(false);
 
    const toggleSignup = () => {
@@ -49,6 +53,8 @@ const Login = ({toggleLogin}) => {
                else if(res.data.message == "Login Success")
                {
                 alert("Login successfull");
+    navigate(`/profile/${user.id}`);
+
                 // navigate("/");
                }
               //  else if(res.data.message == "Login Success")
@@ -67,10 +73,6 @@ const Login = ({toggleLogin}) => {
    
            catch (err) {
             alert(err);
-          }
-          
-          finally{
-    toggleLogin();
           }
         }
 
